@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test tsc  \"tsc -w\" \"karma start karma.conf.js\"",
-    "start": "cross-env NODE_ENV=live node ./server/bin/server.js",
-    "devstart": "cross-env NODE_ENV=devs node ./server/bin/server.js",
+    "start": "cross-env NODE_ENV=live node ./index.js",
+    "devstart": "cross-env NODE_ENV=devs node ./index.js",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
     "lint": "tslint ./app/**/*.ts -t verbose",
     "lite": "lite-server",
@@ -60,7 +60,7 @@
     "webdriver-manager": "10.2.5",
     "rimraf": "^2.5.4",
 
-    "@types/node": "^6.0.46",
+    "@types/node": "^6.9.1",
     "@types/jasmine": "^2.5.36",
     "@types/selenium-webdriver": "^2.53.33"
   },
