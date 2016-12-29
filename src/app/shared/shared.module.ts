@@ -14,6 +14,11 @@ import { MainContentComponent } from './main-content/main-content.component';
   NavigationHeaderComponent,
   SideMenuComponent,
   PageFooterComponent,
+  MainContentComponent],
+  exports: [
+  NavigationHeaderComponent,
+  SideMenuComponent,
+  PageFooterComponent,
   MainContentComponent]
 })
 export class SharedModule { }
