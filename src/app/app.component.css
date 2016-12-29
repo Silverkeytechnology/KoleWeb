@@ -1,0 +1,12 @@
+.main-container {
+  background: #EAEDED;
+  border: 2px solid gray;
+  border-radius: 5px;
+  height: auto;;
+}
+
+/*.main-container.header.nav-header-component {
+  background: #B2BABB;
+  border: 30px;
+  border-radius: 2;
+}*/
