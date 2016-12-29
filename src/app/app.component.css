@@ -1,8 +1,20 @@
-.main-container {
-  background: #EAEDED;
+#container {
+  position: relative;
+  background: lightgray;
   border: 2px solid gray;
   border-radius: 5px;
-  height: auto;;
+  height: 650px;
+
+}
+
+#main-content-component {
+
+}
+#page-footer-component {
+
+}
+#nav-header-component {
+
 }
 
 /*.main-container.header.nav-header-component {
