@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module.ts';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
