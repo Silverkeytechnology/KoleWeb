@@ -4,21 +4,22 @@
     <div>
     <ul>
       <li>
-        <a href="#" class="current">Students</a>
+        <a routerLink="/students-center" routerLinkActive="active" class="current">Students</a>
       </li>
       <li>
-        <a href="#">Classes</a>
+        <a routerLink="/class-dashboard">Classes</a>
       </li>
       <li>
-        <a href="#">Courses</a>
+        <a routerLink="/courses-dashboard">Courses</a>
       </li>
       <li>
-        <a href="#">Instructors</a>
+        <a routerLink="/instructors-center">Instructors</a>
       </li>
       <li>
-        <a href="#">Schools</a>
+        <a routerLink="schools-dashboard">Schools</a>
       </li>
     </ul>
   </div>
   </nav>
 </header>
+<router-outlet></router-outlet>
