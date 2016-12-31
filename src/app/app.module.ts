@@ -11,22 +11,15 @@ import { StudentsModule } from './students/students.module';
 
 //Setup Routing
 const appRoutes: Routes = [
-  { path: 'students-center', component: StudentsComponent},
-  { path: 'students-list', component: StudentsListComponent},
-  { path: 'student/:id', component: StudentDetailComponent},
+  { path: 'students-center', component: StudentsComponent, data: {title: 'Students Center'}},
+  { path: 'students-list', component: StudentsListComponent, data: {title: 'Students List'}},
+  { path: 'student/:id', component: StudentDetailComponent, data: {title: 'Student Detail'}},
   { path: '',
-    redirectTo: '/students',
+    redirectTo: '/students-center',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent}
 ];
-
-RouterModule.forRoot([
-  {
-    path: 'students',
-    component: StudentsComponent
-  }
-])
 
 @NgModule({
   declarations: [AppComponent],
