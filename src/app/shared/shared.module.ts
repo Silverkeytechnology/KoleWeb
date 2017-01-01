@@ -5,6 +5,7 @@ import { NavigationHeaderComponent } from './navigation-header/navigation-header
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { MainContentComponent } from './main-content/main-content.component';
   NavigationHeaderComponent,
   SideMenuComponent,
   PageFooterComponent,
-  MainContentComponent],
+  MainContentComponent,
+  PageNotFoundComponent],
   exports: [
   NavigationHeaderComponent,
   SideMenuComponent,
