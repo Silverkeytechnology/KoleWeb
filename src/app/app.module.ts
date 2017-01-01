@@ -2,29 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { StudentsModule } from './students/students.module';
+import { appRouter } from './app.router'
 
-//Setup Routing
-const appRoutes: Routes = [
-  { path: 'students-center', component: StudentsComponent, data: {title: 'Students Center'}},
-  { path: 'students-list', component: StudentsListComponent, data: {title: 'Students List'}},
-  { path: 'student/:id', component: StudentDetailComponent, data: {title: 'Student Detail'}},
-  { path: '',
-    redirectTo: '/students-center',
-    pathMatch: 'full'
-  },
-  { path: '**', component: PageNotFoundComponent}
-];
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    appRouter,
     BrowserModule,
     FormsModule,
     HttpModule,
