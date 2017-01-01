@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
-import { StudentsListComponent } from './students/students-list/students-list.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
