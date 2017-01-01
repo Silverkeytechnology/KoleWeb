@@ -9,6 +9,7 @@ import { CourseFormComponent } from './course-form/course-form.component';
   imports: [
     CommonModule
   ],
-  declarations: [CoursesDashboardComponent, CoursesListComponent, CourseDetailComponent, CourseFormComponent]
+  declarations: [CoursesDashboardComponent, CoursesListComponent, CourseDetailComponent, CourseFormComponent],
+  exports: [CoursesDashboardComponent, CoursesListComponent, CourseDetailComponent, CourseFormComponent]
 })
 export class CoursesModule { }

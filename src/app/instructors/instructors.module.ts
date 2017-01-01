@@ -9,6 +9,7 @@ import { InstructorFormComponent } from './instructor-form/instructor-form.compo
   imports: [
     CommonModule
   ],
-  declarations: [InstructorsDashboardComponent, InstructorsListComponent, InstructorDetailComponent, InstructorFormComponent]
+  declarations: [InstructorsDashboardComponent, InstructorsListComponent, InstructorDetailComponent, InstructorFormComponent],
+  exports: [InstructorsDashboardComponent, InstructorsListComponent, InstructorDetailComponent, InstructorFormComponent]
 })
 export class InstructorsModule { }

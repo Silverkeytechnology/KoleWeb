@@ -9,6 +9,7 @@ import { SchoolFormComponent } from './school-form/school-form.component';
   imports: [
     CommonModule
   ],
-  declarations: [SchoolsDashboardComponent, SchoolsListComponent, SchoolDetailComponent, SchoolFormComponent]
+  declarations: [SchoolsDashboardComponent, SchoolsListComponent, SchoolDetailComponent, SchoolFormComponent],
+  exports: [SchoolsDashboardComponent, SchoolsListComponent, SchoolDetailComponent, SchoolFormComponent]
 })
 export class SchoolsModule { }
