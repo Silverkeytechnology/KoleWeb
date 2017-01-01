@@ -7,15 +7,16 @@
 
 }
 
-#main-content-component {
-
+footer {
+  position: absolute;
+  background: lightgray;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 2;
 }
-#page-footer-component {
 
-}
-#nav-header-component {
-
-}
 
 /*.main-container.header.nav-header-component {
   background: #B2BABB;

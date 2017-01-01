@@ -1,16 +1,16 @@
+
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
-import { StudentsModule } from './students/students.module';
+import { StudentsComponent } from './students/students.component';
+import { StudentsListComponent } from './students/students-list/students-list.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: AppComponent, data: {title: 'Welcome to Kole Systems!'}},
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
+  { path: 'students-center', component: StudentsComponent, data: {title: 'Kole Students Center!'}},
+  { path: 'students', component: StudentsListComponent, data: {title: 'Kole Students'}},
+
+  { path: '', redirectTo: '/students-center', pathMatch: 'full', data: {title: 'Kole Students Center!'}},
   { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found'}}
 ];
 
