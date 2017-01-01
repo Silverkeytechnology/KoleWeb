@@ -6,6 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { StudentsModule } from './students/students.module';
+import { ClassesModule } from './classes/classes.module';
+import { CoursesModule } from './courses/courses.module';
+import { InstructorsModule } from './instructors/instructors.module';
+import { SchoolsModule } from './schools/schools.module';
 import { appRouter } from './app.router'
 
 
@@ -17,7 +21,11 @@ import { appRouter } from './app.router'
     FormsModule,
     HttpModule,
     SharedModule,
-    StudentsModule
+    StudentsModule,
+    ClassesModule,
+    CoursesModule,
+    InstructorsModule,
+    SchoolsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
