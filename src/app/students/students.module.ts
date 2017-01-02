@@ -4,15 +4,17 @@ import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
-import { appRouter} from '../app.router';
-import { StudentsHomeComponent } from './students-home/students-home.component';
+import { StudentsCenterComponent } from './students-center/students-center.component';
+import { StudentsRouterModule } from './students-router.module';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
-    appRouter
+    StudentsRouterModule
   ],
-  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsHomeComponent],
-  exports: [StudentsListComponent,StudentDetailComponent,StudentFormComponent,StudentFormComponent]
+  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent],
+  exports: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent]
 })
 export class StudentsModule { }
