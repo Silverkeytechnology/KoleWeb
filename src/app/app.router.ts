@@ -10,6 +10,11 @@ import { SchoolsDashboardComponent } from './schools/schools-dashboard/schools-d
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
+  { path: 'classes-dashboard', component: ClassesDashboardComponent, data: {title: 'Kole Classes Center!'}},
+  { path: 'courses-dashboard', component: CoursesDashboardComponent, data: {title: 'Kole Courses Center!'}},
+  { path: 'instructors-dashboard', component: InstructorsDashboardComponent, data: {title: 'Kole Instructors Center!'}},
+  { path: 'schools-dashboard', component: SchoolsDashboardComponent, data: {title: 'Kole Schools Center!'}},
+
   { path: '', redirectTo: '/students-center', pathMatch: 'full', data: {title: 'Kole Students Center!'}},
   { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found'}}
 ];
