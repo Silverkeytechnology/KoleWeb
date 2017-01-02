@@ -5,6 +5,7 @@ import { StudentsDashboardComponent } from './students-dashboard/students-dashbo
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { StudentsCenterComponent } from './students-center/students-center.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 
 const studentsRoutes: Routes = [
@@ -16,6 +17,10 @@ const studentsRoutes: Routes = [
         path: 'students-list',
         component: StudentsListComponent,
         children: [
+          {
+            path: 'new',
+            component: StudentFormComponent
+          },
           {
             path: ':id',
             component: StudentDetailComponent
