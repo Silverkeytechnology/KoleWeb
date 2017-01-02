@@ -5,13 +5,14 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
 import { appRouter} from '../app.router';
+import { StudentsHomeComponent } from './students-home/students-home.component';
 
 @NgModule({
   imports: [
     CommonModule,
     appRouter
   ],
-  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent],
+  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsHomeComponent],
   exports: [StudentsListComponent,StudentDetailComponent,StudentFormComponent,StudentFormComponent]
 })
 export class StudentsModule { }
