@@ -1,3 +1,77 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#qb-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://dev.sktcomputers.com/" target="_blank">
+        <!--<img  alt="Brand" src="../assets/images/logo.png"  style="height:50px;" >-->
+        Kole Systems
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="qb-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<!--<alert type="success">hello</alert>-->
+<div class="custom-container container-fluid ">
+  <nav class="container ">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active" routerLink="/students-center" [routerLinkActive]="['active']">
+            <a >Students </a>
+          </li>
+          <li role="presentation" routerLink="/classes-dashboard" [routerLinkActive]="['active']">
+            <a>Classes</a>
+          </li>
+          <li role="presentation" routerLink="/school-departments" [routerLinkActive]="['active']">
+            <a>Departments</a>
+          </li>
+          <li role="presentation" routerLink="/instructors-dashboard" [routerLinkActive]="['active']">
+            <a>Teachers</a>
+          </li>
+
+        </ul>
+  </nav>
+</div>
+
+<div class="container main-content" >
+  <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <footer class="footer">
+      <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact Us</a>
+      <p>Powered by Silverkey Technologies!</p>
+    </footer>
+  </div>
+</nav>
