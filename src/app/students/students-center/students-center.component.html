@@ -1,17 +1,41 @@
-<h2>
-  Students Center
-</h2>
-<nav >
-    <div >
-      <ul >
-        <li >
-          <a routerLink="/students-center/students-dashboard" routerLinkActive="active">Students Dashboard </a>
-        </li>
-        <li>
-          <a routerLink="/students-center/students-list" routerLinkActive="active">Students List</a>
-        </li>
-      </ul>
-    </div>
-</nav>
 
-<router-outlet></router-outlet>
+<div class="row">
+  <nav class="container col-sm-3 "  >
+    <ul class="nav nav-pills nav-stacked" >
+      <li role="presentation" routerLink="/students-center/students-dashboard" [routerLinkActive]="['active']">
+        <a >Dashboard </a>
+      </li>
+      <li role="presentation" routerLink="/students-center/students-list" [routerLinkActive]="['active']" >
+        <a>Register<span class="badge">1,118</span></a>
+      </li>
+      <li role="presentation" routerLink="/students-center/students-list2" [routerLinkActive]="['active']">
+        <a>Attendance</a>
+      </li>
+
+      <li role="presentation" routerLink="/students-center/students-list3" [routerLinkActive]="['active']">
+        <a>Performance</a>
+      </li>
+      <li role="presentation"  routerLink="/students-center/students-list4" [routerLinkActive]="['active']">
+        <a>Transfers</a>
+      </li>
+      <li role="presentation" routerLink="/students-center/students-list5" [routerLinkActive]="['active']">
+        <a>Disciplinary</a>
+      </li>
+      <li role="presentation" routerLink="/students-center/students-list6" [routerLinkActive]="['active']">
+        <a>Payments</a>
+      </li>
+      <li routerLink="/students-center/students-list7" [routerLinkActive]="['active']" >
+        <a >Sponsorship
+          <span class="badge alert-important" title="GRZ">1,118</span>
+          <span class="badge alert-warning" title="Self">300</span>
+          <span class="badge alert-info" title="NGO">20</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container tab-content col-sm-9">
+    <router-outlet ></router-outlet>
+  </div>
+
+</div>

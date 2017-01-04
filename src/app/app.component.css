@@ -1,5 +1,3 @@
-
-
 footer {
   position: absolute;
   background: lightgray;
@@ -9,10 +7,3 @@ footer {
   text-align: center;
   border-radius: 2;
 }
-
-
-/*.main-container.header.nav-header-component {
-  background: #B2BABB;
-  border: 30px;
-  border-radius: 2;
-}*/

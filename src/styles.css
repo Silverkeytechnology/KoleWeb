@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+.main-content{
+  margin-top: 10px;
+}
+body { padding-top: 50px; }
+
+.custom-container {
+  background: #D8D9DA;
+}
+.custom-menu {
+  border: 2;
+  border-color:  #D8D9DA;
+}

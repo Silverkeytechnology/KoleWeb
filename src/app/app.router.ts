@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   { path: 'schools-dashboard', component: SchoolsDashboardComponent, data: {title: 'Kole Schools Center!'}},
   { path: 'compose', component: ComposeMessageComponent, outlet: 'popup' },
 
-  { path: '', redirectTo: '/students-center', pathMatch: 'full', data: {title: 'Kole Students Center!'}},
+  { path: '', redirectTo: '/students-center/students-dashboard', pathMatch: 'full', data: {title: 'Kole Students Center!'}},
   { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found'}}
 ];
 
