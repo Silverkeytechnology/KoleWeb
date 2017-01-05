@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./students-list.component.css']
 })
 export class StudentsListComponent implements OnInit {
-  students_list: Array<any>;
+  students: Array<any>;
   serverUrl: string;
   studentsApi: string;
 
@@ -22,8 +22,9 @@ export class StudentsListComponent implements OnInit {
   }
 
   getStudents() {
-    this.http.request('http://localhost:3000/api/students').subscribe((res: Response) => {
-      console.log(res.json());
+    this.http.request('https://kole-api.herokuapp.com/api/students').subscribe((res: Response) => {
+      this.students = res.json();
+      console.log(this.students);
     })
   }
 }
