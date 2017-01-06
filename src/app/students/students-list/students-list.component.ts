@@ -1,4 +1,5 @@
 import { Http, Response } from '@angular/http';
+import { StudentService } from '..\shared\student.service.ts';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -8,13 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./students-list.component.css']
 })
 export class StudentsListComponent implements OnInit {
-  students: Array<any>;
-  serverUrl: string;
-  studentsApi: string;
+  students: Student[];
 
-  constructor(private http: Http) {
-    //serverUrl = 'http://localhost:3000/api/students';
-    //studentsApi = serverUrl + 'api/students';
+  constructor(private studentservice: StudentService) {
+
+
   }
 
   ngOnInit() {
@@ -22,9 +21,9 @@ export class StudentsListComponent implements OnInit {
   }
 
   getStudents() {
-    this.http.request('https://kole-api.herokuapp.com/api/students').subscribe((res: Response) => {
-      this.students = res.json();
-      console.log(this.students);
-    });
-  }
+    this.studentservice.getStudents()
+                        .subscribe(
+                          students => this.students = students,
+                          error => this.errorMessage = <any>error
+                        );
 }
