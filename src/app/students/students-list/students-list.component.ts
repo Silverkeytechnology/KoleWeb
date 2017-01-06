@@ -25,6 +25,6 @@ export class StudentsListComponent implements OnInit {
     this.http.request('https://kole-api.herokuapp.com/api/students').subscribe((res: Response) => {
       this.students = res.json();
       console.log(this.students);
-    })
+    });
   }
 }

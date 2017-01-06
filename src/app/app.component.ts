@@ -1,3 +1,5 @@
+// Add the RxJS Observable operators.
+import './rxjs-operators';
 import { Component } from '@angular/core';
 
 @Component({
