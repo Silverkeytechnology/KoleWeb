@@ -7,6 +7,7 @@ import { StudentsDashboardComponent } from './students-dashboard/students-dashbo
 import { StudentsCenterComponent } from './students-center/students-center.component';
 import { StudentsRouterModule } from './students-router/students-router.module';
 import { StudentsEnrollmentComponent } from './students-enrollment/students-enrollment.component';
+import { StudentsAttendanceComponent } from './students-attendance/students-attendance.component';
 
 
 
@@ -15,7 +16,7 @@ import { StudentsEnrollmentComponent } from './students-enrollment/students-enro
     CommonModule,
     StudentsRouterModule
   ],
-  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent],
+  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent],
   exports: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent]
 })
 export class StudentsModule { }
