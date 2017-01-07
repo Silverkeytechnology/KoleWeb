@@ -10,6 +10,7 @@ import { StudentsEnrollmentComponent } from './students-enrollment/students-enro
 import { StudentsAttendanceComponent } from './students-attendance/students-attendance.component';
 import { StudentsPerformanceComponent } from './students-performance/students-performance.component';
 import { StudentsTransferComponent } from './students-transfer/students-transfer.component';
+import { StudentsDisciplinaryComponent } from './students-disciplinary/students-disciplinary.component';
 
 
 
@@ -18,7 +19,7 @@ import { StudentsTransferComponent } from './students-transfer/students-transfer
     CommonModule,
     StudentsRouterModule
   ],
-  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent],
+  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent],
   exports: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent]
 })
 export class StudentsModule { }
