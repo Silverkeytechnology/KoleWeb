@@ -18,8 +18,8 @@ import { appRouter } from './app.router'
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    AlertModule.forRoot(),
-    DropdownModule.forRoot(),
+    AlertModule,
+    DropdownModule,
     appRouter,
     BrowserModule,
     FormsModule,
