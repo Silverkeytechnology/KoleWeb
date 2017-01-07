@@ -8,21 +8,22 @@ Make no assumptions about the server API. Not all servers return an object with 
 */
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
 import { Student } from '../student-model/student';
 
 @Injectable()
 export class StudentService {
 
-  private studentsUrl = 'kole-api.herokuapp.com/api/students'; //URL to web API
+  private studentsUrl = 'https://kole-api.herokuapp.com/api/students'; //URL to web API
   constructor(private http: Http) { }
 
   private extractData(res: Response){
+
     let body = res.json();
     return body || { };
   }
 
-  getStudents(): observable<Student[]> {
+  getStudents(): Observable<Student[]> {
     return this.http.get(this.studentsUrl)
                     .map(this.extractData)
                     .catch(this.handleError);
@@ -40,7 +41,7 @@ export class StudentService {
     }
 
     console.error(errMsg);
-    return observable.throw(errMsg);
+    return Observable.throw(errMsg);
   }
 
 }

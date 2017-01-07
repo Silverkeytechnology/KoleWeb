@@ -1,6 +1,7 @@
 import { Http, Response } from '@angular/http';
-import { StudentService } from '..\shared\student.service.ts';
+import { StudentService } from '../shared/student.service';
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../student-model/student';
 
 
 @Component({
@@ -10,11 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentsListComponent implements OnInit {
   students: Student[];
+  errorMessage: string;
 
-  constructor(private studentservice: StudentService) {
-
-
-  }
+  constructor(private studentservice: StudentService) {  }
 
   ngOnInit() {
     this.getStudents();
@@ -23,7 +22,8 @@ export class StudentsListComponent implements OnInit {
   getStudents() {
     this.studentservice.getStudents()
                         .subscribe(
-                          students => this.students = students,
-                          error => this.errorMessage = <any>error
+                          students => {this.students = students;},
+                          error => {this.errorMessage = <any>error;}
                         );
+  }
 }
