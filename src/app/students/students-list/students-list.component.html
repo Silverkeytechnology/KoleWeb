@@ -13,14 +13,14 @@
         <th>Gender</th>
       </thead>
       <tbody>
-        <tr *ngFor="let student of students">
+        <tr *ngFor="let student of students"
+            (click) = "onSelect(student)">
             <td> {{ student.firstName }}</td>
             <td> {{ student.lastName }}</td>
             <td> {{ student.gender }} </td>
-            <td> <a href="/students-center/students-list/:id" ><span class="glyphicon glyphicon-pencil"></span></a></td>
         </tr>
       </tbody>
   </table>
 </div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>

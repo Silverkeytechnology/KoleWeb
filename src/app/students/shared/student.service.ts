@@ -17,6 +17,16 @@ export class StudentService {
   private studentsUrl = 'https://kole-api.herokuapp.com/api/students'; //URL to web API
   constructor(private http: Http) { }
 
+  getStudent(id: string): Observable<Student> {
+    let studentURL = this.studentsUrl + '/'+ id;
+    console.log("id: ", id);
+    console.log("url: ", studentURL);
+
+    return this.http.get(studentURL)
+                .map(res => res.json() || {})
+                .catch(this.handleError);
+  }
+
   private extractData(res: Response){
 
     let body = res.json();
@@ -25,7 +35,7 @@ export class StudentService {
 
   getStudents(): Observable<Student[]> {
     return this.http.get(this.studentsUrl)
-                    .map(this.extractData)
+                    .map(res => res.json() || {})
                     .catch(this.handleError);
   }
 

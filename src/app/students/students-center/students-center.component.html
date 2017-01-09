@@ -11,23 +11,23 @@
       <li role="presentation" routerLink="/students-center/students-list" [routerLinkActive]="['active']" >
         <a>Register<span class="badge">{{ count }}</span></a>
       </li>
-      <li role="presentation" routerLink="/students-center/students-list2" [routerLinkActive]="['active']">
+      <li role="presentation" routerLink="/students-center/students-attendance" [routerLinkActive]="['active']">
         <a>Attendance</a>
       </li>
 
-      <li role="presentation" routerLink="/students-center/students-list3" [routerLinkActive]="['active']">
+      <li role="presentation" routerLink="/students-center/students-performance" [routerLinkActive]="['active']">
         <a>Performance</a>
       </li>
-      <li role="presentation"  routerLink="/students-center/students-list4" [routerLinkActive]="['active']">
+      <li role="presentation"  routerLink="/students-center/students-transfer" [routerLinkActive]="['active']">
         <a>Transfers</a>
       </li>
-      <li role="presentation" routerLink="/students-center/students-list5" [routerLinkActive]="['active']">
+      <li role="presentation" routerLink="/students-center/students-disciplinary" [routerLinkActive]="['active']">
         <a>Disciplinary</a>
       </li>
-      <li role="presentation" routerLink="/students-center/students-list6" [routerLinkActive]="['active']">
+      <li role="presentation" routerLink="/students-center/students-payments" [routerLinkActive]="['active']">
         <a>Payments</a>
       </li>
-      <li routerLink="/students-center/students-list7" [routerLinkActive]="['active']" >
+      <li routerLink="/students-center/students-sponsorship" [routerLinkActive]="['active']" >
         <a >Sponsorship
           <span class="badge alert-important" title="GRZ">1,118</span>
           <span class="badge alert-warning" title="Self">300</span>
@@ -38,7 +38,7 @@
   </nav>
 
   <div class="container tab-content col-sm-9">
-    <router-outlet ></router-outlet>
+    <router-outlet></router-outlet>
   </div>
 
 </div>

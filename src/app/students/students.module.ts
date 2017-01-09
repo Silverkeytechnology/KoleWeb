@@ -13,11 +13,13 @@ import { StudentsTransferComponent } from './students-transfer/students-transfer
 import { StudentsDisciplinaryComponent } from './students-disciplinary/students-disciplinary.component';
 import { StudentsPaymentsComponent } from './students-payments/students-payments.component';
 import { StudentsSponsorshipComponent } from './students-sponsorship/students-sponsorship.component';
+import { ModalModule } from 'ng2-bootstrap';
 
 
 
 @NgModule({
   imports: [
+    ModalModule,
     CommonModule,
     StudentsRouterModule
   ],

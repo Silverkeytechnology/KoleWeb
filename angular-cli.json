@@ -27,6 +27,7 @@
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/fuelux/dist/js/fuelux.min.js"
 
+
       ],
       "environments": {
         "source": "environments/environment.ts",

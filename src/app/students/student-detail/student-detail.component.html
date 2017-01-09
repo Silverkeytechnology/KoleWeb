@@ -1,3 +1,71 @@
-<h4>
-  Student Details
-</h4>
+<div bsModal #modal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="modal.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Title</h4>
+      </div>
+      <div class="modal-body">
+        hello world
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div class='panel panel-default' *ngIf='student'>
+    <div class='panel-heading' >
+        Student Details for {{student.firstName}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>First Name:</div>
+                    <div class='col-md-6'>{{student.firstName}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Last Name:</div>
+                    <div class='col-md-6'>{{student.lastName}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Gender:</div>
+                    <div class='col-md-6'>{{student.gender}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Record ID:</div>
+                    <div class='col-md-6'>{{student._id}}</div>
+                </div>
+
+                <div class='row'>
+                    <div class='col-md-3'>5 Star Rating:</div>
+                    <div class='col-md-6'>
+                        <ai-star [rating]='product.starRating'
+                                (ratingClicked)='onRatingClicked($event)'>
+                        </ai-star>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class='col-md-6'>
+                <img class='center-block img-responsive'
+                     [style.width.px]='200'
+                     [style.margin.px]='2'
+                     [src]='product.imageUrl'
+                     [title]='product.productName'>
+            </div>
+
+        </div>
+    </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+</div>
+-->

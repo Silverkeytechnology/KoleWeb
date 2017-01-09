@@ -1,11 +1,6 @@
-export class Student {
+export interface Student {
   firstName: string;
   lastName: string;
   gender: string;
-
-  constructor(fName: string, lName: string, sex: string){
-    this.firstName = fName;
-    this.lastName = lName;
-    this.gender = sex;
-  }
+  _id: string;
 }
