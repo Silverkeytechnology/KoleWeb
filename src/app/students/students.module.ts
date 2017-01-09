@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, NgLocalization } from '@angular/common';
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
@@ -13,13 +14,11 @@ import { StudentsTransferComponent } from './students-transfer/students-transfer
 import { StudentsDisciplinaryComponent } from './students-disciplinary/students-disciplinary.component';
 import { StudentsPaymentsComponent } from './students-payments/students-payments.component';
 import { StudentsSponsorshipComponent } from './students-sponsorship/students-sponsorship.component';
-import { ModalModule } from 'ng2-bootstrap';
-
 
 
 @NgModule({
   imports: [
-    ModalModule,
+    NgbModule,
     CommonModule,
     StudentsRouterModule
   ],
