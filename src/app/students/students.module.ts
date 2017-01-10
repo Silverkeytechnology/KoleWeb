@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, NgLocalization } from '@angular/common';
 import { StudentsListComponent } from './students-list/students-list.component';
-import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { StudentDetailComponent} from './student-detail/student-detail.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
 import { StudentsCenterComponent } from './students-center/students-center.component';
@@ -14,6 +14,7 @@ import { StudentsTransferComponent } from './students-transfer/students-transfer
 import { StudentsDisciplinaryComponent } from './students-disciplinary/students-disciplinary.component';
 import { StudentsPaymentsComponent } from './students-payments/students-payments.component';
 import { StudentsSponsorshipComponent } from './students-sponsorship/students-sponsorship.component';
+import { StudentDetailModalComponent } from './student-detail-modal/student-detail-modal.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { StudentsSponsorshipComponent } from './students-sponsorship/students-sp
     CommonModule,
     StudentsRouterModule
   ],
-  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent],
+  declarations: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentDetailModalComponent],
   exports: [StudentsListComponent, StudentDetailComponent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent]
+
 })
 export class StudentsModule { }
