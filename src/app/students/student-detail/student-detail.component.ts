@@ -15,7 +15,7 @@ export class StudentDetailComponent implements OnInit {
   student: Student;
 
   constructor(public activeModal: NgbActiveModal, private route: ActivatedRoute, private router: Router, private service: StudentService) { }
-ngOnInit() {
+  ngOnInit() {
     console.log("Routed to here!");
 //    this.open();
   /*  this.route.params

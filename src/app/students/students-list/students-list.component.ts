@@ -1,9 +1,13 @@
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { StudentService } from '../shared/student.service';
 import { Component, OnInit} from '@angular/core';
 import { Student } from '../student-model/student';
 import { Observable } from 'rxjs/Observable';
+import { StudentDetailModalComponent } from '../student-detail-modal/student-detail-modal.component';
+
+//import { StudentDetailComponent } from '../student-detail/student-detail.component';
 
 
 @Component({
@@ -14,16 +18,32 @@ import { Observable } from 'rxjs/Observable';
 export class StudentsListComponent implements OnInit {
   students: Student[];
   errorMessage: string;
+  studentDetailComponent: StudentDetailModalComponent;
 
-  constructor(private router: Router, private studentservice: StudentService) {  }
+  constructor(private router: Router, private studentservice: StudentService, private modalService: NgbModal) {  }
 
   ngOnInit() {
+    //this.studentDetailComponent = new StudentDetailModalComponent();
     this.studentservice.getStudents()
                         .subscribe(
                           students => {this.students = students;},
                           error => {this.errorMessage = <any>error;}
                         );
   }
+
+open() {
+  console.log("Detail: ", this.studentDetailComponent);
+  //this.studentDetailComponent.open();
+
+/*    const modalRef = this.modalService.open(StudentDetailComponent);
+    modalRef.componentInstance.name = 'Chaiwa';
+    modalRef.result.then((result) => {
+    }, (reason) => {
+
+    });
+    */
+  }
+
 
   getStudents() {
   }

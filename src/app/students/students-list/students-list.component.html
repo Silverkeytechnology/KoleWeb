@@ -13,8 +13,10 @@
         <th>Gender</th>
       </thead>
       <tbody>
+        <!--(click) = "onSelect(student)">-->
         <tr *ngFor="let student of students"
-            (click) = "onSelect(student)">
+            (click)="open()"
+            >
             <td> {{ student.firstName }}</td>
             <td> {{ student.lastName }}</td>
             <td> {{ student.gender }} </td>
@@ -25,7 +27,6 @@
     <small class="text-muted">This is Card Footer</small>
   </div>
 </div>
-<router-outlet></router-outlet>
-<template ngbModalContainer>
-
-</template>
+<template ngbModalContainer></template>
+<app-student-detail-modal></app-student-detail-modal>
+<!--<router-outlet></router-outlet>-->
