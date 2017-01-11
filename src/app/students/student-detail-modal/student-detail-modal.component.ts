@@ -29,4 +29,8 @@ export class StudentDetailModalComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    this.open();
+  }
+
 }

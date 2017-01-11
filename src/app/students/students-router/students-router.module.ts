@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StudentsDashboardComponent } from '../students-dashboard/students-dashboard.component';
 import { StudentsListComponent } from '../students-list/students-list.component';
-import { StudentDetailComponent } from '../student-detail/student-detail.component';
+import { StudentDetailModalComponent } from '../student-detail-modal/student-detail-modal.component';
 import { StudentsCenterComponent } from '../students-center/students-center.component';
 import { StudentFormComponent } from '../student-form/student-form.component';
 
@@ -36,7 +36,7 @@ const studentsRoutes: Routes = [
         },
         { path: 'students-list',component: StudentsListComponent,
          children: [
-            { path: ':id', component: StudentDetailComponent }
+            { path: ':id', component: StudentDetailModalComponent }
           ]
 
         }
