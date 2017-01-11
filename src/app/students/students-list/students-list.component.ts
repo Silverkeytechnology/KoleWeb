@@ -32,7 +32,7 @@ export class StudentsListComponent implements OnInit {
   }
 
 open() {
-  console.log("Detail: ", this.studentDetailComponent);
+  //console.log("Detail: ", this.studentDetailComponent);
   //this.studentDetailComponent.open();
 
 /*    const modalRef = this.modalService.open(StudentDetailComponent);
