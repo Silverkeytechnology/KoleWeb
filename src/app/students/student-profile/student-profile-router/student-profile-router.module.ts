@@ -7,11 +7,14 @@ import { StudentPaymentsProfileComponent } from '../student-payments-profile/stu
 import { StudentHealthProfileComponent } from '../student-health-profile/student-health-profile.component';
 import { StudentDisciplinaryProfileComponent } from '../student-disciplinary-profile/student-disciplinary-profile.component';
 import { StudentAcademicProfileComponent } from '../student-academic-profile/student-academic-profile.component';
+import { StudentPersonalInfoPComponent } from '../personal-info/personal-info.component';
+
 
 const studentsRoutes: Routes = [
 
     { path: 'student-profile', component: StudentProfileComponent,
       children: [
+        { path: 'personal-info',component: StudentAcademicProfileComponent },
         { path: 'academic',component: StudentAcademicProfileComponent },
         { path: 'students-attendance',component: StudentsAttendanceComponent },
         { path: 'students-performance',component: StudentsPerformanceComponent },

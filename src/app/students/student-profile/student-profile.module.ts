@@ -6,12 +6,12 @@ import { DisciplinaryProfileComponent } from './disciplinary-profile/disciplinar
 import { HealthProfileComponent } from './health-profile/health-profile.component';
 import { PaymentsProfileComponent } from './payments-profile/payments-profile.component';
 import { SponsorshipProfileComponent } from './sponsorship-profile/sponsorship-profile.component';
-import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { StudentPersonalInfoComponent } from './personal-info/personal-info.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [StudentProfileComponent, AcademicProfileComponent, DisciplinaryProfileComponent, HealthProfileComponent, PaymentsProfileComponent, SponsorshipProfileComponent, PersonalInfoComponent]
+  declarations: [StudentProfileComponent, AcademicProfileComponent, DisciplinaryProfileComponent, HealthProfileComponent, PaymentsProfileComponent, SponsorshipProfileComponent, StudentPersonalInfoComponent]
 })
 export class StudentProfileModule { }
