@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, NgLocalization } from '@angular/common';
+import { StudentProfileModule } from './student-profile/student-profile.module';
+
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
@@ -20,7 +22,8 @@ import { StudentDetailModalComponent, StudentDetailContent } from './student-det
   imports: [
     NgbModule,
     CommonModule,
-    StudentsRouterModule
+    StudentsRouterModule,
+    StudentProfileModule
   ],
   declarations: [StudentsListComponent, StudentDetailContent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentDetailModalComponent],
   entryComponents: [StudentDetailContent],
