@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { StudentProfileComponent } from '../student-profile/student-profile.component';
-import { StudentSponsorshipProfileComponent } from '/../../sponsorship-profile/student-sponsorship-profile.component';
-import { StudentPaymentsProfileComponent } from '/../../payments-profile/student-payments-profile.component';
-import { StudentHealthProfileComponent } from '/../../health-profile/student-health-profile.component';
-import { StudentDisciplinaryProfileComponent } from '/../../disciplinary-profile/student-disciplinary-profile.component';
-import { StudentAcademicProfileComponent } from '/../../academic-profile/student-academic-profile.component';
-import { StudentPersonalInfoPComponent } from '/../../personal-info/personal-info.component';
+import { SponsorshipProfileComponent } from '../sponsorship-profile/sponsorship-profile.component';
+import { PaymentsProfileComponent } from '../payments-profile/payments-profile.component';
+import { HealthProfileComponent } from '../health-profile/health-profile.component';
+import { DisciplinaryProfileComponent } from '../disciplinary-profile/disciplinary-profile.component';
+import { AcademicProfileComponent } from '../academic-profile/academic-profile.component';
+import { StudentPersonalInfoComponent } from '../personal-info/student-personal-info.component';
 
 
 
@@ -17,12 +17,12 @@ const studentProfileRoutes: Routes = [
     { path: 'student-profile', component: StudentProfileComponent,
       children: [
         { path: '', redirectTo: '/student-profile/personal-info', pathMatch: 'full' },
-        { path: 'personal-info',component: StudentPersonalInfoPComponent },
-        { path: 'academic',component: StudentAcademicProfileComponent },
-        { path: 'disciplinary',component: StudentDisciplinaryProfileComponent },
-        { path: 'health',component: StudentHealthProfileComponent },
-        { path: 'payments',component: StudentPaymentsProfileComponent },
-        { path: 'sponsorship',component: StudentSponsorshipProfileComponent }
+        { path: 'personal-info',component: StudentPersonalInfoComponent },
+        { path: 'academic',component: AcademicProfileComponent },
+        { path: 'disciplinary',component: DisciplinaryProfileComponent },
+        { path: 'health',component: HealthProfileComponent },
+        { path: 'payments',component: PaymentsProfileComponent },
+        { path: 'sponsorship',component: SponsorshipProfileComponent }
       ]
     }
 ];
@@ -35,7 +35,7 @@ const studentProfileRoutes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
   declarations: []
 })
 export class StudentProfileRouterModule { }
