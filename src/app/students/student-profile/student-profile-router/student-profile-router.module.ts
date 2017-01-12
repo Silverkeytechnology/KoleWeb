@@ -1,48 +1,41 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
 import { StudentProfileComponent } from '../student-profile/student-profile.component';
-import { StudentSponsorshipProfileComponent } from '../student-sponsorship-profile/student-sponsorship-profile.component';
-import { StudentPaymentsProfileComponent } from '../student-payments-profile/student-payments-profile.component';
-import { StudentHealthProfileComponent } from '../student-health-profile/student-health-profile.component';
-import { StudentDisciplinaryProfileComponent } from '../student-disciplinary-profile/student-disciplinary-profile.component';
-import { StudentAcademicProfileComponent } from '../student-academic-profile/student-academic-profile.component';
-import { StudentPersonalInfoPComponent } from '../personal-info/personal-info.component';
+import { StudentSponsorshipProfileComponent } from '/../../sponsorship-profile/student-sponsorship-profile.component';
+import { StudentPaymentsProfileComponent } from '/../../payments-profile/student-payments-profile.component';
+import { StudentHealthProfileComponent } from '/../../health-profile/student-health-profile.component';
+import { StudentDisciplinaryProfileComponent } from '/../../disciplinary-profile/student-disciplinary-profile.component';
+import { StudentAcademicProfileComponent } from '/../../academic-profile/student-academic-profile.component';
+import { StudentPersonalInfoPComponent } from '/../../personal-info/personal-info.component';
 
 
-const studentsRoutes: Routes = [
+
+const studentProfileRoutes: Routes = [
 
     { path: 'student-profile', component: StudentProfileComponent,
       children: [
-        { path: 'personal-info',component: StudentAcademicProfileComponent },
+        { path: '', redirectTo: '/student-profile/personal-info', pathMatch: 'full' },
+        { path: 'personal-info',component: StudentPersonalInfoPComponent },
         { path: 'academic',component: StudentAcademicProfileComponent },
-        { path: 'students-attendance',component: StudentsAttendanceComponent },
-        { path: 'students-performance',component: StudentsPerformanceComponent },
-        { path: 'students-transfer',component: StudentsTransferComponent },
-        { path: 'students-disciplinary',component: StudentsDisciplinaryComponent },
-        { path: 'students-payments',component: StudentsPaymentsComponent },
-        { path: 'students-sponsorship',component: StudentsSponsorshipComponent },
-        { path: 'students-enrollment',component: StudentsEnrollmentComponent,
-          children: [
-            { path: 'new', component: StudentFormComponent }
-  //          { path: ':id', component: StudentDetailComponent }
-          ]
-        },
-        { path: 'students-list',component: StudentsListComponent,
-         children: [
-            { path: ':id', component: StudentDetailModalComponent }
-          ]
-
-        }
+        { path: 'disciplinary',component: StudentDisciplinaryProfileComponent },
+        { path: 'health',component: StudentHealthProfileComponent },
+        { path: 'payments',component: StudentPaymentsProfileComponent },
+        { path: 'sponsorship',component: StudentSponsorshipProfileComponent }
       ]
-  }
+    }
 ];
 
 
 @NgModule({
   imports: [
+    RouterModule.forChild(studentProfileRoutes),
     CommonModule
   ],
+  exports: [
+    RouterModule
+  ]
   declarations: []
 })
 export class StudentProfileRouterModule { }

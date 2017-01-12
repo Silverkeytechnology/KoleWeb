@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
+
 import { StudentsDashboardComponent } from '../students-dashboard/students-dashboard.component';
 import { StudentsListComponent } from '../students-list/students-list.component';
 import { StudentDetailModalComponent } from '../student-detail-modal/student-detail-modal.component';
