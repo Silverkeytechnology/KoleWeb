@@ -2,12 +2,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { StudentService } from '../shared/student.service';
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import { Student } from '../student-model/student';
 import { Observable } from 'rxjs/Observable';
 import { StudentDetailModalComponent } from '../student-detail-modal/student-detail-modal.component';
-
-//import { StudentDetailComponent } from '../student-detail/student-detail.component';
 
 
 @Component({
