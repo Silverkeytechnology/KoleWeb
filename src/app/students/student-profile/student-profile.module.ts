@@ -4,11 +4,12 @@ import { StudentProfileComponent } from './student-profile/student-profile.compo
 import { AcademicProfileComponent } from './academic-profile/academic-profile.component';
 import { DisciplinaryProfileComponent } from './disciplinary-profile/disciplinary-profile.component';
 import { HealthProfileComponent } from './health-profile/health-profile.component';
+import { PaymentsProfileComponent } from './payments-profile/payments-profile.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [StudentProfileComponent, AcademicProfileComponent, DisciplinaryProfileComponent, HealthProfileComponent]
+  declarations: [StudentProfileComponent, AcademicProfileComponent, DisciplinaryProfileComponent, HealthProfileComponent, PaymentsProfileComponent]
 })
 export class StudentProfileModule { }
