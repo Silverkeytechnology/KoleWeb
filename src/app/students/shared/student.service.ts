@@ -9,7 +9,7 @@ Make no assumptions about the server API. Not all servers return an object with 
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Student } from '../student-model/student';
+import { Student } from '../student/student.model';
 
 @Injectable()
 export class StudentService {

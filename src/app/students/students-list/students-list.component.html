@@ -15,7 +15,7 @@
       <tbody>
         <!--(click) = "onSelect(student)">-->
         <tr *ngFor="let student of students"
-            (click)="modal.open(student)"
+            (click)="onSelect(student)"
             style="cursor: pointer;"
             >
             <td> {{ student.firstName }}</td>
