@@ -4,9 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { StudentsDashboardComponent } from '../students-dashboard/students-dashboard.component';
 import { StudentsListComponent } from '../students-list/students-list.component';
-import { StudentDetailModalComponent } from '../student-detail-modal/student-detail-modal.component';
 import { StudentsCenterComponent } from '../students-center/students-center.component';
-import { StudentFormComponent } from '../student-form/student-form.component';
 
 import { StudentsEnrollmentComponent } from '../students-enrollment/students-enrollment.component';
 import { StudentsAttendanceComponent } from '../students-attendance/students-attendance.component';
@@ -28,18 +26,8 @@ const studentsRoutes: Routes = [
         { path: 'students-disciplinary',component: StudentsDisciplinaryComponent },
         { path: 'students-payments',component: StudentsPaymentsComponent },
         { path: 'students-sponsorship',component: StudentsSponsorshipComponent },
-        { path: 'students-enrollment',component: StudentsEnrollmentComponent,
-          children: [
-            { path: 'new', component: StudentFormComponent }
-  //          { path: ':id', component: StudentDetailComponent }
-          ]
-        },
-        { path: 'students-list',component: StudentsListComponent,
-         children: [
-            { path: ':id', component: StudentDetailModalComponent }
-          ]
-
-        }
+        { path: 'students-enrollment',component: StudentsEnrollmentComponent},
+        { path: 'students-list',component: StudentsListComponent }
       ]
   }
 ];

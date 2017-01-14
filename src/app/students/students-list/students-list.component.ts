@@ -3,9 +3,8 @@ import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { StudentService } from '../shared/student.service';
 import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-import { Student } from '../student-model/student';
+import { Student } from '../student/student.model';
 import { Observable } from 'rxjs/Observable';
-import { StudentDetailModalComponent } from '../student-detail-modal/student-detail-modal.component';
 
 
 @Component({
@@ -16,12 +15,10 @@ import { StudentDetailModalComponent } from '../student-detail-modal/student-det
 export class StudentsListComponent implements OnInit {
   students: Student[];
   errorMessage: string;
-  studentDetailComponent: StudentDetailModalComponent;
 
   constructor(private router: Router, private studentservice: StudentService, private modalService: NgbModal) {  }
 
   ngOnInit() {
-    //this.studentDetailComponent = new StudentDetailModalComponent();
     this.studentservice.getStudents()
                         .subscribe(
                           students => {this.students = students;},
@@ -52,8 +49,9 @@ You can use this same syntax in a RouterLink if you decide later to navigate in
  HTML template rather than in component code.
 */
   onSelect(student: Student) {
-    this.router.navigate(['/students-center/students-list', student._id]);
+/*    this.router.navigate(['/students-center/students-list', student._id]);
     console.log("student._id: ", student._id);
     console.log("student._id type: ", typeof(student._id));
+    */
   }
 }
