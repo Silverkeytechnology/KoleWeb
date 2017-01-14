@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, NgLocalization } from '@angular/common';
 import { StudentProfileModule } from './student-profile/student-profile.module';
-
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
@@ -16,6 +15,9 @@ import { StudentsDisciplinaryComponent } from './students-disciplinary/students-
 import { StudentsPaymentsComponent } from './students-payments/students-payments.component';
 import { StudentsSponsorshipComponent } from './students-sponsorship/students-sponsorship.component';
 import { StudentDetailModalComponent, StudentDetailContent } from './student-detail-modal/student-detail-modal.component';
+import { StudentHealthComponent } from './student-health/student-health.component';
+import { StudentsHealthComponent } from './students-health/students-health.component';
+import { StudentAttendanceComponent } from './student/student-attendance/student-attendance.component';
 
 
 @NgModule({
@@ -25,7 +27,7 @@ import { StudentDetailModalComponent, StudentDetailContent } from './student-det
     StudentsRouterModule,
     StudentProfileModule
   ],
-  declarations: [StudentsListComponent, StudentDetailContent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentDetailModalComponent],
+  declarations: [StudentsListComponent, StudentDetailContent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentDetailModalComponent, StudentHealthComponent, StudentsHealthComponent, StudentAttendanceComponent],
   entryComponents: [StudentDetailContent],
   exports: [StudentsListComponent,StudentDetailContent, StudentFormComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentDetailModalComponent]
 })
