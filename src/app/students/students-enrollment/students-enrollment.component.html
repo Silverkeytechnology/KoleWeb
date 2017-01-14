@@ -1,0 +1,49 @@
+<div class="panel panel-primary ">
+  <div class="panel-heading">
+    <h3 class="panel-title">Students Enrollment</h3>
+  </div>
+  <div class="panel-body fuelux">
+    <div class="wizard" data-initialize="wizard" id="enrollWizard">
+      <div class="steps-container">
+        <ul class="steps">
+          <li data-step="1" data-name="admission" class="active">
+            <span class="badge">1</span>Confirm Admission
+            <span class="chevron"></span>
+          </li>
+          <li data-step="2">
+            <span class="badge">2</span>Confirm Payments
+            <span class="chevron"></span>
+          </li>
+          <li data-step="3">
+            <span class="badge">3</span>Assign Class
+            <span class="chevron"></span>
+          </li>
+        </ul>
+      </div>
+  <div class="actions">
+    <button type="button" class="btn btn-default btn-prev">
+      <span class="glyphicon glyphicon-arrow-left"></span>Prev
+    </button>
+    <button type="button" class="btn btn-primary btn-next" data-last="Complete">Next
+      <span class="glyphicon glyphicon-arrow-right"></span>
+    </button>
+  </div>
+  <div class="step-content">
+    <div class="step-pane active sample-pane alert" data-step="1">
+      <h4>Confirm Admission</h4>
+    </div>
+
+    <div class="step-pane sample-pane bg-info alert" data-step="2">
+      <h4>Confirm Payments</h4>
+    </div>
+
+    <div class="step-pane active sample-pane alert" data-step="3">
+      <h4>Assign Class</h4>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
