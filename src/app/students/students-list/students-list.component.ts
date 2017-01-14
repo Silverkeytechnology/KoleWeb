@@ -37,6 +37,7 @@ open() {
 
     });
     */
+    console.log('Clic event fired..');
   }
 
 
