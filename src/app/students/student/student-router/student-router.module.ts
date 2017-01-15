@@ -8,7 +8,7 @@ import { StudentPaymentsComponent } from '../student-payments/student-payments.c
 import { StudentHealthComponent } from '../student-health/student-health.component';
 import { StudentDisciplinaryComponent } from '../student-disciplinary/student-disciplinary.component';
 import { StudentPerformanceComponent } from '../student-performance/student-performance.component';
-import { StudentPersonalInfoComponent } from '../personal-info/student-personal-info.component';
+import { StudentPersonalInfoComponent } from '../student-personal-info/student-personal-info.component';
 import { StudentAttendanceComponent } from '../student-attendance/student-attendance.component';
 
 

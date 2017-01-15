@@ -14,8 +14,6 @@ import { StudentsDisciplinaryComponent } from './students-disciplinary/students-
 import { StudentsPaymentsComponent } from './students-payments/students-payments.component';
 import { StudentsSponsorshipComponent } from './students-sponsorship/students-sponsorship.component';
 import { StudentsHealthComponent } from './students-health/students-health.component';
-import { StudentAttendanceComponent } from './student/student-attendance/student-attendance.component';
-
 
 @NgModule({
   imports: [
@@ -24,8 +22,8 @@ import { StudentAttendanceComponent } from './student/student-attendance/student
     StudentsRouterModule,
     StudentModule
   ],
-  declarations: [StudentsListComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentsHealthComponent, StudentAttendanceComponent],
+  declarations: [StudentsListComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentsHealthComponent],
   //entryComponents: [StudentDetailContent],
-  exports: [StudentsListComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentsHealthComponent, StudentAttendanceComponent]
+  exports: [StudentsListComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentsHealthComponent]
 })
 export class StudentsModule { }

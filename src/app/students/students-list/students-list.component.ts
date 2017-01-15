@@ -16,7 +16,8 @@ export class StudentsListComponent implements OnInit {
   students: Student[];
   errorMessage: string;
 
-  constructor(private router: Router, private studentservice: StudentService, private modalService: NgbModal) {  }
+//  constructor(private router: Router, private studentservice: StudentService, private modalService: NgbModal) {  }
+constructor(private router: Router, private studentservice: StudentService) {  }
 
   ngOnInit() {
     this.studentservice.getStudents()

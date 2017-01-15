@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StudentProfileRouterModule } from './student-router/student-router.module';
+
 import { StudentAttendanceComponent } from './student-attendance/student-attendance.component';
 import { StudentDisciplinaryComponent } from './student-disciplinary/student-disciplinary.component';
 import { StudentFormComponent } from './student-form/student-form.component';
@@ -16,7 +17,7 @@ import { StudentSponsorshipComponent } from './student-sponsorship/student-spons
     CommonModule,
     StudentProfileRouterModule
   ],
-  declarations: [StudentProfileRouterModule, StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent],
-  exports: [StudentProfileRouterModule, StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent]
+  declarations: [StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent],
+  exports: [StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent]
 })
 export class StudentModule { }
