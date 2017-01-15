@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { StudentProfileComponent } from '../student-profile/student-profile.component';
-import { SponsorshipProfileComponent } from '../sponsorship-profile/sponsorship-profile.component';
-import { PaymentsProfileComponent } from '../payments-profile/payments-profile.component';
-import { HealthProfileComponent } from '../health-profile/health-profile.component';
-import { DisciplinaryProfileComponent } from '../disciplinary-profile/disciplinary-profile.component';
-import { AcademicProfileComponent } from '../academic-profile/academic-profile.component';
+import { StudentSponsorshipComponent } from '../student-sponsorship/student-sponsorship.component';
+import { StudentPaymentsComponent } from '../student-payments/student-payments.component';
+import { StudentHealthComponent } from '../student-health/student-health.component';
+import { StudentDisciplinaryComponent } from '../student-disciplinary/student-disciplinary.component';
+import { StudentPerformanceComponent } from '../student-performance/student-performance.component';
 import { StudentPersonalInfoComponent } from '../personal-info/student-personal-info.component';
+import { StudentAttendanceComponent } from '../student-attendance/student-attendance.component';
 
 
 
@@ -16,13 +17,17 @@ const studentProfileRoutes: Routes = [
 
     { path: 'student-profile', component: StudentProfileComponent,
       children: [
-        { path: '', redirectTo: '/student-profile/personal-info', pathMatch: 'full' },
-        { path: 'personal-info',component: StudentPersonalInfoComponent },
-        { path: 'academic',component: AcademicProfileComponent },
-        { path: 'disciplinary',component: DisciplinaryProfileComponent },
-        { path: 'health',component: HealthProfileComponent },
-        { path: 'payments',component: PaymentsProfileComponent },
-        { path: 'sponsorship',component: SponsorshipProfileComponent }
+        { path: ':id', component: StudentPersonalInfoComponent,
+        children: [
+          { path: 'personal-info',component: StudentPersonalInfoComponent },
+          { path: 'performance',component: StudentPerformanceComponent },
+          { path: 'disciplinary',component: StudentDisciplinaryComponent },
+          { path: 'health',component: StudentHealthComponent },
+          { path: 'payments',component: StudentPaymentsComponent },
+          { path: 'sponsorship',component: StudentSponsorshipComponent },
+          { path: 'attendance',component: StudentAttendanceComponent }
+        ]
+      }
       ]
     }
 ];
