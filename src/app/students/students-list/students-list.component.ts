@@ -50,9 +50,11 @@ You can use this same syntax in a RouterLink if you decide later to navigate in
  HTML template rather than in component code.
 */
   onSelect(student: Student) {
-/*    this.router.navigate(['/students-center/students-list', student._id]);
+    /*this.router.navigate(['/students-center/students-list', student._id]);
     console.log("student._id: ", student._id);
     console.log("student._id type: ", typeof(student._id));
     */
+    this.router.navigate(['/student-profile/', student._id]);
+
   }
 }
