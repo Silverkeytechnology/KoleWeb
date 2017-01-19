@@ -15,7 +15,7 @@
       <tbody>
         <!--(click) = "onSelect(student)">-->
         <tr *ngFor="let student of students"
-            (click)="onSelect(student)"
+            (click)="open(student)"
             style="cursor: pointer;"
             >
             <td> {{ student.firstName }}</td>
@@ -28,5 +28,5 @@
     <small class="text-muted">This is Card Footer</small>
   </div>
 </div>
-
 <router-outlet ></router-outlet>
+<template ngbModalContainer></template>

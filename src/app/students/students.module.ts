@@ -14,6 +14,7 @@ import { StudentsDisciplinaryComponent } from './students-disciplinary/students-
 import { StudentsPaymentsComponent } from './students-payments/students-payments.component';
 import { StudentsSponsorshipComponent } from './students-sponsorship/students-sponsorship.component';
 import { StudentsHealthComponent } from './students-health/students-health.component';
+import { StudentProfileComponent } from './student/student-profile/student-profile.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { StudentsHealthComponent } from './students-health/students-health.compo
     StudentModule
   ],
   declarations: [StudentsListComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentsHealthComponent],
-  //entryComponents: [StudentDetailContent],
+  entryComponents: [StudentProfileComponent],
   exports: [StudentsListComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentsHealthComponent]
 })
 export class StudentsModule { }

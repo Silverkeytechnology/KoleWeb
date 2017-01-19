@@ -5,6 +5,7 @@ import { StudentService } from '../shared/student.service';
 import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import { Student } from '../student/student.model';
 import { Observable } from 'rxjs/Observable';
+import { StudentProfileComponent } from '../student/student-profile/student-profile.component';
 
 
 @Component({
@@ -12,14 +13,18 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './students-list.component.html',
   styleUrls: ['./students-list.component.css']
 })
-export class StudentsListComponent implements OnInit {
+export class StudentsListComponent implements OnInit, AfterViewInit {
   students: Student[];
   errorMessage: string;
+  profile: StudentProfileComponent;
+
 
 //  constructor(private router: Router, private studentservice: StudentService, private modalService: NgbModal) {  }
-constructor(private router: Router, private studentservice: StudentService) {  }
+constructor(private router: Router,private studentservice: StudentService, private modalService: NgbModal) {  }
 
   ngOnInit() {
+    //instantiate component
+    //this.profile = new StudentProfileComponent;
     this.studentservice.getStudents()
                         .subscribe(
                           students => {this.students = students;},
@@ -27,18 +32,23 @@ constructor(private router: Router, private studentservice: StudentService) {  }
                         );
   }
 
-open() {
+  ngAfterViewInit() {
+
+  }
+
+open(student: Student) {
   //console.log("Detail: ", this.studentDetailComponent);
   //this.studentDetailComponent.open();
+    //console.log('profile: ', this.profile);
+    //I want to route to modal's component and then invoke modal to open
+    this.router.navigate(['student-profile', student._id]);
+    this.modalService.open(StudentProfileComponent);
 
-/*    const modalRef = this.modalService.open(StudentDetailComponent);
-    modalRef.componentInstance.name = 'Chaiwa';
-    modalRef.result.then((result) => {
-    }, (reason) => {
 
-    });
-    */
-    console.log('Clic event fired..');
+    //modalRef.componentInstance.name = 'Chaiwa';
+    //modalRef.result.then((result) => {
+    //}, (reason) => {    });
+
   }
 
 

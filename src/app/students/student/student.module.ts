@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StudentProfileRouterModule } from './student-router/student-router.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { StudentAttendanceComponent } from './student-attendance/student-attendance.component';
 import { StudentDisciplinaryComponent } from './student-disciplinary/student-disciplinary.component';
@@ -15,9 +16,11 @@ import { StudentSponsorshipComponent } from './student-sponsorship/student-spons
 @NgModule({
   imports: [
     CommonModule,
-    StudentProfileRouterModule
+    StudentProfileRouterModule,
+    NgbModule.forRoot()
   ],
   declarations: [StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent],
+  entryComponents: [StudentProfileComponent],
   exports: [StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent]
 })
 export class StudentModule { }

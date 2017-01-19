@@ -14,16 +14,18 @@ export class StudentProfileComponent implements OnInit, OnDestroy {
   sub: any;
 
   //constructor(public activeModal: NgbActiveModal, private modalService: NgbModal) { }
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
+      console.log('id: ', this.id);
     });
+
   }
 
   ngOnDestroy() {
-    this.sub.unsubscribe();
+    //this.sub.unsubscribe();
   }
 
   public open(_student: Student) {
