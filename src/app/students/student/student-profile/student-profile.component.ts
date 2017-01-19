@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, Compiler } from '@angular/core';
+import { Component, Input, OnInit,OnDestroy, Compiler } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Student } from '../student.model';
 
@@ -7,13 +8,22 @@ import { Student } from '../student.model';
   templateUrl: './student-profile.component.html',
   styleUrls: ['./student-profile.component.css']
 })
-export class StudentProfileComponent implements OnInit {
+export class StudentProfileComponent implements OnInit, OnDestroy {
   @Input() student: Student;
+  id: string;
+  sub: any;
 
   //constructor(public activeModal: NgbActiveModal, private modalService: NgbModal) { }
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
   public open(_student: Student) {

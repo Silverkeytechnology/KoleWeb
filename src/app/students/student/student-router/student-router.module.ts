@@ -15,10 +15,9 @@ import { StudentAttendanceComponent } from '../student-attendance/student-attend
 
 const studentProfileRoutes: Routes = [
 
-    { path: 'student-profile', component: StudentProfileComponent,
+    { path: 'student-profile/:id', component: StudentProfileComponent,
       children: [
-        { path: ':id', component: StudentPersonalInfoComponent,
-        children: [
+          { path: '', redirectTo: 'personal-info', pathMatch: 'full'},
           { path: 'personal-info',component: StudentPersonalInfoComponent },
           { path: 'performance',component: StudentPerformanceComponent },
           { path: 'disciplinary',component: StudentDisciplinaryComponent },
@@ -28,8 +27,6 @@ const studentProfileRoutes: Routes = [
           { path: 'attendance',component: StudentAttendanceComponent }
         ]
       }
-      ]
-    }
 ];
 
 
