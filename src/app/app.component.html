@@ -1,4 +1,7 @@
 <!---Bootstrap 4-->
+<nav class="navbar fixed-top navbar-light bg-faded">
+  <a class="navbar-brand" href="">Kole Systems</a>
+</nav>
 <ul class="nav nav-tabs">
   <li class="nav-item" role="presentation" class="nav-link active" routerLink="/students-center" [routerLinkActive]="['active']">
     <a>Students</a>
@@ -17,8 +20,38 @@
 <div class="container-fluid" >
   <router-outlet></router-outlet>
   <router-outlet name="popup"></router-outlet>
-  
+
 </div>
+<footer>
+  <nav id="kole-footer" role="navigation"  class="navbar fixed-bottom  bg-faded">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-12">
+                  <a href="http://www.kolesystems.org/" class="footer-link-img" target="_blank">
+                      <img src="../assets/images/kole_logo_footer.png"
+                           alt="KoleSystems"
+                           height="30"  />
+                  </a>
+              &nbsp;
+                      <a href="http://www.kolesystems.org/" target="_blank">Kole Systems</a>
+                      is copyright &copy;
+                  2017
+                  <a href="http://www.sktcomputers.com/" target="_blank">Silverkey Technologies, Inc.</a>
+
+                      &nbsp;|&nbsp;
+                      <a href="http://www.kolesystems.org/home" target="_blank">Learn more about Kole Systems</a>
+
+                  &nbsp;|&nbsp;
+                  <a href="http://www.kolesystems.org/eula" target="_blank">Read Kole Systems's End User License Agreement</a>
+                  &nbsp;|&nbsp;
+                  <a href="http://www.kolesystems.org/policy" target="_blank">Privacy</a>
+                  &nbsp;|&nbsp;
+                  <a href="http://www.kolesystems.org/product_agreement/" target="_blank">Product Subscription Agreement</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+</footer>
 
 <!--<nav class="navbar">
   <div class="container-fluid">
