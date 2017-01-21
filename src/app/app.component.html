@@ -1,27 +1,52 @@
 <!---Bootstrap 4-->
-<nav class="navbar fixed-top navbar-light bg-faded">
-  <a class="navbar-brand" href="">Kole Systems</a>
-</nav>
-<ul class="nav nav-tabs">
-  <li class="nav-item" role="presentation" class="nav-link active" routerLink="/students-center" [routerLinkActive]="['active']">
-    <a>Students</a>
-  </li>
-  <li class="nav-item" role="presentation" class="nav-link" routerLink="/classes-dashboard" [routerLinkActive]="['active']">
-    <a>Classes</a>
-  </li>
-  <li class="nav-item" class="nav-link" role="presentation" routerLink="/school-departments" [routerLinkActive]="['active']">
-    <a>Departments</a>
-  </li>
-  <li class="nav-item" role="presentation" class="nav-link" routerLink="/instructors-dashboard" [routerLinkActive]="['active']">
-    <a>Teachers</a>
-  </li>
-</ul>
+<nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <a class="navbar-brand" href="">Kole Systems</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+      <li class="nav-item nav-link active" role="presentation" routerLink="/students-center" [routerLinkActive]="['active']">
+        <a>Students <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item  nav-link" role="presentation"  routerLink="/classes-dashboard" [routerLinkActive]="['active']">
+        <a>Classes</a>
+      </li>
+      <li class="nav-item nav-link" role="presentation" routerLink="/school-departments" [routerLinkActive]="['active']">
+        <a>Departments</a>
+      </li>
+      <li class="nav-item nav-link" role="presentation" routerLink="/instructors-dashboard" [routerLinkActive]="['active']">
+        <a>Teachers</a>
+      </li>
+    </ul>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li  class="nav-item nav-link" role="presentation" routerLink="/students-center" [routerLinkActive]="['active']">
+          <a>Settings</a>
+        </li>
+        <li class="nav-item nav-link" role="presentation" routerLink="/students-center" [routerLinkActive]="['active']">
+          <a>User Profile</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<!-- PLACEHOLDER FOR BREADCRUMB HERE-->
+<div class="container">
+<p></p>
+</div>
+
+<!--router outlets-->
 <div class="container-fluid" >
   <router-outlet></router-outlet>
   <router-outlet name="popup"></router-outlet>
-
 </div>
+
 <footer>
   <nav id="kole-footer" role="navigation"  class="navbar fixed-bottom  bg-faded">
       <div class="container-fluid">
