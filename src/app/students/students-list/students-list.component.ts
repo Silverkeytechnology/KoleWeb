@@ -27,6 +27,6 @@ constructor(private router: Router,private studentservice: StudentService) {  }
   }
 
   onSelect(student: Student) {
-    this.router.navigate(['/student-profile/', student._id]);
+    //this.router.navigate([{outlets: {[menucontent:, ['/students-center/students-list/',student._id]]}}]);
   }
 }

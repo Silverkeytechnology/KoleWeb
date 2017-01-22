@@ -12,13 +12,14 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 import { ComposeMessageComponent } from './shared/compose-message/compose-message.component';
 
 const appRoutes: Routes = [
+  { path: '', redirectTo: '/schools-dashboard', pathMatch: 'full', data: {title: 'School Dashboard!'}},
+  { path: 'schools-dashboard', component: SchoolsDashboardComponent, data: {title: 'Kole Schools Center!'}},
   { path: 'classes-dashboard', component: ClassesDashboardComponent, data: {title: 'Kole Classes Center!'}},
   { path: 'courses-dashboard', component: CoursesDashboardComponent, data: {title: 'Kole Courses Center!'}},
   { path: 'instructors-dashboard', component: InstructorsDashboardComponent, data: {title: 'Kole Instructors Center!'}},
-  { path: 'schools-dashboard', component: SchoolsDashboardComponent, data: {title: 'Kole Schools Center!'}},
+  { path: 'students-center', component: StudentsCenterComponent},
   { path: 'compose', component: ComposeMessageComponent, outlet: 'popup' },
 
-  { path: '', redirectTo: '/students-center/students-dashboard', pathMatch: 'full', data: {title: 'Kole Students Center!'}},
   { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found'}}
 ];
 
