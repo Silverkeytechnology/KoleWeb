@@ -1,5 +1,14 @@
 .side-bar {
   background: #EAECEE;
   border-radius: 2;
-  
+
+}
+.nav > li:focus,
+.nav > li:hover
+{
+    text-decoration: underline;
+    background-color: #1a1aff;
+},
+.nav{
+  background-color: #e6e6e6;
 }
