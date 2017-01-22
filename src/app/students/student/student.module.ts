@@ -20,7 +20,6 @@ import { StudentSponsorshipComponent } from './student-sponsorship/student-spons
     NgbModule.forRoot()
   ],
   declarations: [StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent],
-  entryComponents: [StudentProfileComponent],
   exports: [StudentAttendanceComponent, StudentDisciplinaryComponent, StudentFormComponent, StudentHealthComponent, StudentPaymentsComponent, StudentPerformanceComponent, StudentPersonalInfoComponent, StudentProfileComponent, StudentSponsorshipComponent]
 })
 export class StudentModule { }

@@ -1,6 +1,5 @@
 import { Component, Input, OnInit,OnDestroy, Compiler } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Student } from '../student.model';
 
 @Component({
@@ -13,8 +12,7 @@ export class StudentProfileComponent implements OnInit, OnDestroy {
   id: string;
   sub: any;
 
-  //constructor(public activeModal: NgbActiveModal, private modalService: NgbModal) { }
-  constructor(private route: ActivatedRoute, public activeModal: NgbActiveModal) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -25,14 +23,6 @@ export class StudentProfileComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    //this.sub.unsubscribe();
+    this.sub.unsubscribe();
   }
-
-  public open(_student: Student) {
-    //this.compiler.clearCacheFor(student-detail-modal-content); only when the template is caching
-    //const modalRef = this.modalService.open(StudentDetailContent);
-    //modalRef.componentInstance.student = _student;
-  }
-
-
 }
