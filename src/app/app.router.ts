@@ -11,6 +11,7 @@ import { SchoolsDashboardComponent } from './schools/schools-dashboard/schools-d
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { ComposeMessageComponent } from './shared/compose-message/compose-message.component';
 
+
 const appRoutes: Routes = [
   { path: '', redirectTo: '/schools-dashboard', pathMatch: 'full', data: {title: 'School Dashboard!'}},
   { path: 'schools-dashboard', component: SchoolsDashboardComponent, data: {title: 'Kole Schools Center!'}},

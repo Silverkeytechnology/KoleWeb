@@ -4,8 +4,10 @@ import { CommonModule, NgLocalization } from '@angular/common';
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
 import { StudentsCenterComponent } from './students-center/students-center.component';
+
 import { StudentsRouterModule } from './students-router/students-router.module';
 import { StudentModule } from './student/student.module';
+
 import { StudentsEnrollmentComponent } from './students-enrollment/students-enrollment.component';
 import { StudentsAttendanceComponent } from './students-attendance/students-attendance.component';
 import { StudentsPerformanceComponent } from './students-performance/students-performance.component';
