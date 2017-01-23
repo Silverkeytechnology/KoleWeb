@@ -15,14 +15,21 @@ export class StudentProfileComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
+    /*this.sub = this.route.queryParams.subscribe(params => {
       this.id = params['id'];
       console.log('id: ', this.id);
+      console.log('route: ', this.route);
+    });
+    */
+    this.route.parent.queryParams.subscribe(parmas => {
+      this.id = parmas["id"];
+      console.log('id:', this.id);
+      console.log('parent: ', this.route.parent);
     });
 
   }
 
   ngOnDestroy() {
-    this.sub.unsubscribe();
+    //this.sub.unsubscribe();
   }
 }

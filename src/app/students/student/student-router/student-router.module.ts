@@ -15,16 +15,16 @@ import { StudentAttendanceComponent } from '../student-attendance/student-attend
 
 const studentProfileRoutes: Routes = [
 
-    { path: 'student-profile/:id', component: StudentProfileComponent,
+    { path: 'student-profile', component: StudentProfileComponent,outlet: 'menucontent',
       children: [
-          { path: '', redirectTo: 'personal-info', pathMatch: 'full'},
-          { path: 'personal-info',component: StudentPersonalInfoComponent },
-          { path: 'performance',component: StudentPerformanceComponent },
-          { path: 'disciplinary',component: StudentDisciplinaryComponent },
-          { path: 'health',component: StudentHealthComponent },
-          { path: 'payments',component: StudentPaymentsComponent },
-          { path: 'sponsorship',component: StudentSponsorshipComponent },
-          { path: 'attendance',component: StudentAttendanceComponent }
+          //{ path: '', redirectTo: '/student-profile/(menucontent:)(info:personal-info)', pathMatch: 'full'},
+          { path: ':id',component: StudentPersonalInfoComponent, outlet: 'info' },
+          { path: 'performance',component: StudentPerformanceComponent, outlet: 'performance' },
+          { path: 'disciplinary',component: StudentDisciplinaryComponent, outlet: 'disciplinary' },
+          { path: 'health',component: StudentHealthComponent, outlet: 'health' },
+          { path: 'payments',component: StudentPaymentsComponent, outlet: 'payments' },
+          { path: 'sponsorship',component: StudentSponsorshipComponent, outlet: 'sponsorship' },
+          { path: 'attendance',component: StudentAttendanceComponent, outlet: 'attendance' }
         ]
       }
 ];

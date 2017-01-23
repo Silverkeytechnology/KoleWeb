@@ -13,17 +13,25 @@ import { StudentsTransferComponent } from '../students-transfer/students-transfe
 import { StudentsDisciplinaryComponent } from '../students-disciplinary/students-disciplinary.component';
 import { StudentsPaymentsComponent } from '../students-payments/students-payments.component';
 import { StudentsSponsorshipComponent } from '../students-sponsorship/students-sponsorship.component';
+import { StudentProfileComponent } from '../student/student-profile/student-profile.component';
 
 const studentsRoutes: Routes = [
-        { path: 'students-dashboard',component: StudentsDashboardComponent, outlet: 'menucontent' },
-        { path: 'students-attendance',component: StudentsAttendanceComponent, outlet: 'menucontent' },
-        { path: 'students-performance',component: StudentsPerformanceComponent, outlet: 'menucontent' },
-        { path: 'students-transfer',component: StudentsTransferComponent, outlet: 'menucontent' },
-        { path: 'students-disciplinary',component: StudentsDisciplinaryComponent, outlet: 'menucontent' },
-        { path: 'students-payments',component: StudentsPaymentsComponent, outlet: 'menucontent' },
-        { path: 'students-sponsorship',component: StudentsSponsorshipComponent, outlet: 'menucontent' },
-        { path: 'students-enrollment',component: StudentsEnrollmentComponent, outlet:'menucontent'},
-        { path: 'students-list',component: StudentsListComponent, outlet: 'menucontent' }
+        { path: 'students-center', component: StudentsCenterComponent,
+          children:
+          [
+            { path: '', redirectTo: '/students-center/(menucontent:students-dashboard)', pathMatch: 'full'},
+            { path: 'students-dashboard',component: StudentsDashboardComponent, outlet: 'menucontent' },
+            { path: 'students-attendance',component: StudentsAttendanceComponent, outlet: 'menucontent' },
+            { path: 'students-performance',component: StudentsPerformanceComponent, outlet: 'menucontent' },
+            { path: 'students-transfer',component: StudentsTransferComponent, outlet: 'menucontent' },
+            { path: 'students-disciplinary',component: StudentsDisciplinaryComponent, outlet: 'menucontent' },
+            { path: 'students-payments',component: StudentsPaymentsComponent, outlet: 'menucontent' },
+            { path: 'students-sponsorship',component: StudentsSponsorshipComponent, outlet: 'menucontent' },
+            { path: 'students-enrollment',component: StudentsEnrollmentComponent, outlet:'menucontent'},
+            { path: 'students-list',component: StudentsListComponent, outlet: 'menucontent' },
+            { path: 'student-profile', component: StudentProfileComponent, outlet: 'menucontent'}
+        ]
+      }
       ];
 
 @NgModule({
