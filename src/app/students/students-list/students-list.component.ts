@@ -1,4 +1,4 @@
-import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
+import { Router,UrlTree, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { StudentService } from '../shared/student.service';
 import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import { Student } from '../student/student.model';
@@ -32,11 +32,19 @@ constructor(private router: Router,private route: ActivatedRoute, private studen
     //[{outlets: {menucontent: ['students-dashboard']}}]
     //['/students-center/(menucontent:student-profile)', student._id]
     //use relativeTo: route if you choose to use relative paths
+    //get the current url from the router
+    //(menucontent:student-profile;open=true)
+    const url: string = this.router.url;
+    const tree: UrlTree = this.router.parseUrl(url);
+    console.log('url: ', url);
+    console.log('this.route.url: ', this.route.url);
+    console.log('tree: ', tree);
+
     let navigationExtras: NavigationExtras = {
       queryParams: {
         "id": student._id
       }
     };
-    this.router.navigateByUrl('/students-center/(menucontent:student-profile)',navigationExtras );
+    this.router.navigate(['../', student._id], {relativeTo: this.route} );
   }
 }
