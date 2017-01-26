@@ -45,6 +45,8 @@ constructor(private router: Router,private route: ActivatedRoute, private studen
         "id": student._id
       }
     };
-    this.router.navigate(['../', student._id], {relativeTo: this.route} );
+    //['../', student._id], {relativeTo: this.route
+    //this.router.navigate(['students-center/students-list/12']);
+    this.router.navigate([{outlets: {profile: ['students-center','students-list','12']}}]);
   }
 }

@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, NgLocalization } from '@angular/common';
+
+import { StudentsRouterModule } from './students-router/students-router.module';
+
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
 import { StudentsCenterComponent } from './students-center/students-center.component';
@@ -26,6 +29,7 @@ import { StudentSponsorshipComponent } from './student/student-sponsorship/stude
 
 @NgModule({
   imports: [
+    StudentsRouterModule,
     NgbModule,
     CommonModule
   ],

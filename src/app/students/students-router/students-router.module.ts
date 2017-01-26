@@ -59,6 +59,7 @@ const studentsRoutes: Routes = [
   ],
   exports: [
     RouterModule
+
   ]
 })
 
