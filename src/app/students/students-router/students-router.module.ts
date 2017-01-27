@@ -23,7 +23,6 @@ import { StudentPerformanceComponent } from '../student/student-performance/stud
 import { StudentPersonalInfoComponent } from '../student/student-personal-info/student-personal-info.component';
 import { StudentAttendanceComponent } from '../student/student-attendance/student-attendance.component';
 
-
 const studentsRoutes: Routes = [
         { path: 'students-center', component: StudentsCenterComponent,
           children:
@@ -40,13 +39,14 @@ const studentsRoutes: Routes = [
             { path: 'students-list',component: StudentsListComponent},
             { path: 'students-list/:id',component: StudentProfileComponent,
               children: [
-                { path: 'personal-info',component: StudentPersonalInfoComponent, outlet: 'info' },
-                { path: 'performance',component: StudentPerformanceComponent, outlet: 'performance' },
-                { path: 'disciplinary',component: StudentDisciplinaryComponent, outlet: 'disciplinary' },
-                { path: 'health',component: StudentHealthComponent, outlet: 'health' },
-                { path: 'payments',component: StudentPaymentsComponent, outlet: 'payments' },
-                { path: 'sponsorship',component: StudentSponsorshipComponent, outlet: 'sponsorship' },
-                { path: 'attendance',component: StudentAttendanceComponent, outlet: 'attendance' }
+                { path: '', redirectTo: 'personal-info', pathMatch: 'prefix'},
+                { path: 'personal-info',component: StudentPersonalInfoComponent },
+                { path: 'performance',component: StudentPerformanceComponent},
+                { path: 'disciplinary',component: StudentDisciplinaryComponent},
+                { path: 'health',component: StudentHealthComponent},
+                { path: 'payments',component: StudentPaymentsComponent},
+                { path: 'sponsorship',component: StudentSponsorshipComponent},
+                { path: 'attendance',component: StudentAttendanceComponent}
               ]
             }
         ]
