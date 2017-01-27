@@ -34,11 +34,11 @@ constructor(private router: Router,private route: ActivatedRoute, private studen
     //use relativeTo: route if you choose to use relative paths
     //get the current url from the router
     //(menucontent:student-profile;open=true)
-    const url: string = this.router.url;
-    const tree: UrlTree = this.router.parseUrl(url);
-    console.log('url: ', url);
-    console.log('this.route.url: ', this.route.url);
-    console.log('tree: ', tree);
+    //const url: string = this.router.url;
+    //const tree: UrlTree = this.router.parseUrl(url);
+  //  console.log('url: ', url);
+    //console.log('this.route.url: ', this.route.url);
+    //console.log('tree: ', tree);
 
     let navigationExtras: NavigationExtras = {
       queryParams: {
@@ -47,6 +47,7 @@ constructor(private router: Router,private route: ActivatedRoute, private studen
     };
     //['../', student._id], {relativeTo: this.route
     //this.router.navigate(['students-center/students-list/12']);
-    this.router.navigate([{outlets: {profile: ['students-center','students-list','12']}}]);
+    //this.router.navigate([{outlets: {profile: ['students-center','students-list','12']}}]);
+    this.router.navigate(['students-center','students-list',student._id]);
   }
 }
