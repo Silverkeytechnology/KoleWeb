@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, NgLocalization } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { StudentsRouterModule } from './students-router/students-router.module';
 
@@ -31,6 +32,7 @@ import { StudentSponsorshipComponent } from './student/student-sponsorship/stude
   imports: [
     StudentsRouterModule,
     NgbModule,
+    FormsModule,
     CommonModule
   ],
   declarations: [StudentsListComponent,StudentsDashboardComponent, StudentsCenterComponent, StudentsEnrollmentComponent, StudentsAttendanceComponent, StudentsPerformanceComponent, StudentsTransferComponent, StudentsDisciplinaryComponent, StudentsPaymentsComponent, StudentsSponsorshipComponent, StudentsHealthComponent,

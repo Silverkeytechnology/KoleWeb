@@ -1,7 +1,39 @@
 <!--<li class="nav-item nav-link" [routerLink]="[{ outlets: {performance: ['performance']}}]" [routerLinkActive]="['active']">-->
 <div class="card ">
   <div class="card-header">
-    Student Profile
+
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded " >
+      <div class="navbar-brand" >  Student Profile</div>
+      <div class="container justify-content-end" >
+        <div class="dropdown custom-inner-option">
+          <a class="dropdown-toggle" href="Save" id="saveDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="saveDropdownMenuLink">
+            <div class="container-fluid" id="save-options-container">
+              <h6 class="dropdown-header">Save Options</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"> <i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Export to PDF</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item dropdown ">
+          <a class="dropdown-toggle" href="Share" id="shareDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="shareDropdownMenuLink">
+            <h6 class="dropdown-header">Share Options</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><i class="fa fa-share-alt-square" aria-hidden="true"></i> Share via Kole</a>
+            <a class="dropdown-item" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Share via Email</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <hr/>
+
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item nav-link active" [routerLink]="['personal-info']" [routerLinkActive]="['active']">
         <a>Info</a>
@@ -15,18 +47,26 @@
       <li class="nav-item nav-link" [routerLink]="['disciplinary']" [routerLinkActive]="['active']">
         <a>Disciplinary</a>
       </li>
+      <li class="nav-item nav-link" [routerLink]="['health']" [routerLinkActive]="['active']">
+        <a>Health</a>
+      </li>
+      <li class="nav-item nav-link" [routerLink]="['payments']" [routerLinkActive]="['active']">
+        <a>Payments</a>
+      </li>
+      <li class="nav-item nav-link" [routerLink]="['sponsorship']" [routerLinkActive]="['active']">
+        <a>Sponsorship</a>
+      </li>
     </ul>
   </div>
   <div class="card-block">
 
 
-    <div class="container-fluid" >
+    <div class="container-fluid custom-content-area" >
       <router-outlet></router-outlet>
     </div>
-
-    <div class="btn btn-primary" (click)="onBack()">back</div>
   </div>
   <div class="card-footer text-muted">
-    2 days ago
+    <div class="btn btn-primary" (click)="onBack()">back</div>
+    
   </div>
 </div>
