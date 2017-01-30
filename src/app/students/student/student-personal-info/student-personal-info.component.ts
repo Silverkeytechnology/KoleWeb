@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Student } from '../student.model';
+import { StudentService } from '../../shared/student.service';
 
 
 
@@ -13,32 +14,22 @@ export class StudentPersonalInfoComponent implements OnInit,OnDestroy {
   student: Student;
   routedStudentID: string;
   private sub: any;
+  errorMessage: any;
 
-  constructor(private route: ActivatedRoute) {
-    this.student = new Student();
-    
-  }
+  constructor(private route: ActivatedRoute, private studentService: StudentService) { }
 
   ngOnInit() {
-    /*Examples of usage of ActivatedRoute
-    const id: Observable<string> = route.params.map(p => p.id);
-    const url: Observable<string> = route.url.map(segments => segments.join(''));
-
-    // route.data includes both `data` and `resolve`
-    const user = route.data.map(d => d.user);
-    console.log('Activated Route: ', this.route.url);
-    */
-    //fake some name
-    this.student.firstName = "Chaiwa";
-    this.student.lastName = "Berian";
-    this.student.gender = "Male";
-
-
-    //Get parent ActivatedRoute of this route
     this.sub = this.route.parent.params.subscribe(params => {
-                  this.student._id = params['id'];
-                });
-    }
+                  if(params['id'] !== undefined){
+                    this.routedStudentID = params['id'];
+                    this.studentService.getStudent(this.routedStudentID)
+                      .subscribe(
+                            student=>{this.student = student;console.log('returned student: ', student);},
+                            error => {this.errorMessage = <any>error;}
+                          );
+                  }
+    });
+  }
 
 
   ngOnDestroy(){

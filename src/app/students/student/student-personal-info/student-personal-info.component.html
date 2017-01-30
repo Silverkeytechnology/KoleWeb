@@ -9,7 +9,7 @@
         <tr>
           <td> 
             <label for="recordID">Student ID</label>       
-            <input type="text" class="form-control" id="recordID" 
+            <input *ngIf="student" type="text" class="form-control" id="recordID" 
               [(ngModel)]="student._id"
               name="id"
               readonly="readonly"
@@ -17,7 +17,7 @@
           </td>
           <td>        
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" 
+            <input *ngIf="student"  type="text" class="form-control" id="firstName" 
               [(ngModel)]="student.firstName"
               name="firstName"
               readonly="readonly"
@@ -25,25 +25,34 @@
           </td>
           <td>        
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" 
+            <input *ngIf="student" type="text" class="form-control" id="lastName" 
               [(ngModel)]="student.lastName"
               name="lastName"
               readonly="readonly"
             />
           </td>
           <td>        
+            <label for="middleName">Middle Name</label>
+            <input *ngIf="student"  type="text" class="form-control" id="middleName" 
+              [(ngModel)]="student.middleName"
+              name="middleName"
+              readonly="readonly"
+            />
+          </td>
+          
+        </tr>
+        <tr>
+          <td>        
             <label for="gender">Gender</label>
-            <input type="text" class="form-control" id="gender" 
+            <input *ngIf="student"  type="text" class="form-control" id="gender" 
               [(ngModel)]="student.gender"
               name="gender"
               readonly="readonly"
             />
           </td>
-        </tr>
-        <tr>
           <td>        
             <label for="dob">Date of Birth</label>
-            <input type="text" class="form-control" id="dob" 
+            <input *ngIf="student"  type="text" class="form-control" id="dob" 
               [(ngModel)]="student.dob"
               name="dob"
               readonly="readonly"
@@ -51,7 +60,7 @@
           </td>
           <td>        
             <label for="admission_date">Date of Admission</label>
-            <input type="datetime" class="form-control" id="admission_date" 
+            <input *ngIf="student"  type="datetime" class="form-control" id="admission_date" 
               [(ngModel)]="student.admission_date"
               name="admission_date"
               readonly="readonly"
@@ -59,14 +68,204 @@
           </td>
           <td>        
             <label for="home_address">Home Address</label>
-            <address  class="form-control" id="home_address" 
+            <textarea *ngIf="student"  type="text" class="form-control" id="home_address" 
               [(ngModel)]="student.home_address"
               name="home_address"
+              readonly="readonly"
             >
-            </address>
+            </textarea>
+            
           </td>
         </tr>
+        
       </table>
-      
+      <!--Sub Table-->
+      <br>
+        <div class="card-subtitle">
+          <h6>Enrollment Status</h6>
+          <hr>
+        </div>
+        <table>
+          <tr>
+            <td>        
+              <label for="academic_year">Academic Year</label>
+              <input *ngIf="student" type="text" class="form-control" id="academic_year" 
+                [(ngModel)]="student.academic_year"
+                name="academic_year"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="academic_term">Academic Term</label>
+              <input *ngIf="student" type="text" class="form-control" id="academic_term" 
+                [(ngModel)]="student.academic_term"
+                name="academic_term"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="grade">Grade</label>
+              <input *ngIf="student" type="text" class="form-control" id="grade" 
+                [(ngModel)]="student.grade"
+                name="grade"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="class">Class</label>
+              <input *ngIf="student" type="text" class="form-control" id="class" 
+                [(ngModel)]="student.class"
+                name="class"
+                readonly="readonly"
+              />
+            </td>
+            
+          </tr>
+          <tr>
+            <td>        
+              <label for="currently_enrolled">Enrolled</label>
+              <input *ngIf="student" type="text" class="form-control" id="currently_enrolled" 
+                [(ngModel)]="student.enrolled"
+                name="currently_enrolled"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="date_enrolled">Date Enrolled</label>
+              <input *ngIf="student" type="text" class="form-control" id="date_enrolled" 
+                [(ngModel)]="student.date_enrolled"
+                name="date_enrolled"
+                readonly="readonly"
+              />
+            </td>
+             <td>        
+              <label for="paid">Paid</label>
+              <input *ngIf="student" type="text" class="form-control" id="paid" 
+                [(ngModel)]="student.paid"
+                name="paid"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="date_paid">Date Paid</label>
+              <input *ngIf="student" type="text" class="form-control nav-item nav-link" id="date_paid" 
+                [routerLink]="['payments']" [routerLinkActive]="['active']"
+                [(ngModel)]="student.date_paid"
+                name="date_paid"
+                readonly="readonly"
+              />
+            </td>
+          </tr>
+        </table>
+        
+      <!--Appraisals Table-->
+      <br>
+        <div class="card-subtitle">
+          <h6>Appraisals</h6>
+          <hr>
+        </div>
+        <div class="list-group">
+          <button type="button" class="list-group-item list-group-item-action justify-content-between" >
+            School Prefect
+            <span class="badge badge-default badge-pill">3</span>
+          </button>
+          <button type="button" class="list-group-item list-group-item-action justify-content-between">
+            Class Monitor
+            <span class="badge badge-default badge-pill">2</span>
+          </button>
+          <button type="button" class="list-group-item list-group-item-action justify-content-between">
+            Best Student
+            <span class="badge badge-default badge-pill">4</span>
+          </button>
+        </div>
+      <!--Guardian Details-->
+      <br>
+        <div class="card-subtitle">
+          <h6>Guardian</h6>
+          <hr>
+        </div>
+        <table>
+          <tr>
+            <td>        
+              <label for="guardian_firstname">First Name</label>
+              <input *ngIf="student" type="text" class="form-control" id="guardian_firstname" 
+                [(ngModel)]="student.guardian_firstname"
+                name="guardian_firstname"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="guardian_lastname">Last Name</label>
+              <input *ngIf="student" type="text" class="form-control" id="guardian_lastname" 
+                [(ngModel)]="student.guardian_lastname"
+                name="guardian_lastname"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="guardian_gender">Gender</label>
+              <input *ngIf="student" type="text" class="form-control" id="guardian_gender" 
+                [(ngModel)]="student.guardian_gender"
+                name="guardian_gender"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="guardian_dob">Date of Birth</label>
+              <input *ngIf="student" type="text" class="form-control" id="guardian_dob" 
+                [(ngModel)]="student.guardian_dob"
+                name="guardian_dob"
+                readonly="readonly"
+              />
+            </td>
+            
+          </tr>
+          <tr>
+            <td>        
+              <label for="guardian_nrc">NRC Number/ID</label>
+              <input *ngIf="student" type="text" class="form-control" id="guardian_nrc" 
+                [(ngModel)]="student.guardian_nrc"
+                name="guardian_nrc"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="relationship">Relationship</label>
+              <input *ngIf="student" type="text" class="form-control" id="relationship" 
+                [(ngModel)]="student.relationship"
+                name="relationship"
+                readonly="readonly"
+              />
+            </td>
+            <td>        
+              <label for="guardian_address">Home Address</label>
+              <textarea *ngIf="student" type="text" class="form-control" id="guardian_address" 
+                [(ngModel)]="student.guardian_address"
+                name="guardian_address"
+                readonly="readonly"
+              ></textarea>
+            </td>
+            <td>        
+              <label for="guardian_phone">Phone</label>
+              <input *ngIf="student" type="text" class="form-control nav-item nav-link" id="guardian_phone" 
+                [(ngModel)]="student.guardian_phone"
+                name="guardian_phone"
+                readonly="readonly"
+              />
+            </td>
+                        
+          </tr>
+          <tr>
+            <td>        
+              <label for="guardian_email">Email Address</label>
+              <input *ngIf="student" type="text" class="form-control" id="guardian_email" 
+                [(ngModel)]="student.guardian_email"
+                name="guardian_email"
+                readonly="readonly"
+              />
+            </td>
+          </tr>
+        </table>
+
   </div>
 </div>

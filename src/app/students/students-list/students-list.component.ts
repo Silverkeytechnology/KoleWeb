@@ -10,7 +10,7 @@ import { Student } from '../student/student.model';
 })
 export class StudentsListComponent implements OnInit, AfterViewInit {
   students: Student[];
-  errorMessage: string;
+  errorMessage: any;
 
 constructor(private router: Router,private route: ActivatedRoute, private studentservice: StudentService) {  }
 
