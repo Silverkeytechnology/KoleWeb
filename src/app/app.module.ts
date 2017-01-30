@@ -11,7 +11,7 @@ import { ClassesModule } from './classes/classes.module';
 import { CoursesModule } from './courses/courses.module';
 import { InstructorsModule } from './instructors/instructors.module';
 import { SchoolsModule } from './schools/schools.module';
-import { appRouter } from './app.router'
+import { appRouter } from './app.router';
 
 
 @NgModule({

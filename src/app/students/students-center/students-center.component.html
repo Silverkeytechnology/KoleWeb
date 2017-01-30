@@ -1,31 +1,30 @@
-<div class="row">
-  <ul class="nav nav-pills flex-column col-sm-3" >
-    <li role="presentation" class="nav-item nav-link active" routerLink="/students-center/students-dashboard" [routerLinkActive]="['active']">
+<div class="row" >
+  <ul class="nav  nav-pills flex-column col-sm-3" >
+    <li role="presentation" class="nav-item nav-link active" [routerLink]="['students-dashboard']"  [routerLinkActive]="['active']">
       <a >Dashboard </a>
     </li>
-    <li role="presentation" class="nav-item nav-link" routerLink="/students-center/students-enrollment" [routerLinkActive]="['active']">
+    <li role="presentation" class="nav-item nav-link" [routerLink]="['students-enrollment']" [routerLinkActive]="['active']">
       <a >Enrollment </a>
     </li>
-    <li role="presentation"  class="nav-item nav-link" routerLink="/students-center/students-list" [routerLinkActive]="['active']" >
+    <li role="presentation"  class="nav-item nav-link" [routerLink]="['students-list']" [routerLinkActive]="['active']" >
       <a>Register<span class="badge badge-pill badge-default">{{ count }}</span></a>
     </li>
-    <li role="presentation"  class="nav-item nav-link" routerLink="/students-center/students-attendance" [routerLinkActive]="['active']">
+    <li role="presentation"  class="nav-item nav-link" [routerLink]="['students-attendance']" [routerLinkActive]="['active']">
       <a>Attendance</a>
     </li>
-
-    <li role="presentation"  class="nav-item nav-link" routerLink="/students-center/students-performance" [routerLinkActive]="['active']">
+    <li role="presentation"  class="nav-item nav-link" [routerLink]="['students-performance']" [routerLinkActive]="['active']">
       <a>Performance</a>
     </li>
-    <li role="presentation"   class="nav-item nav-link" routerLink="/students-center/students-transfer" [routerLinkActive]="['active']">
+    <li role="presentation"   class="nav-item nav-link" [routerLink]="['students-transfer']"  [routerLinkActive]="['active']">
       <a>Transfers</a>
     </li>
-    <li role="presentation"  class="nav-item nav-link" routerLink="/students-center/students-disciplinary" [routerLinkActive]="['active']">
+    <li role="presentation"  class="nav-item nav-link" [routerLink]="['students-disciplinary']" [routerLinkActive]="['active']">
       <a>Disciplinary</a>
     </li>
-    <li role="presentation"  class="nav-item nav-link" routerLink="/students-center/students-payments" [routerLinkActive]="['active']">
+    <li role="presentation"  class="nav-item nav-link" [routerLink]="['students-payments']" [routerLinkActive]="['active']">
       <a>Payments</a>
     </li>
-    <li routerLink="/students-center/students-sponsorship"  class="nav-item nav-link" [routerLinkActive]="['active']" >
+    <li [routerLink]="['students-sponsorship']" class="nav-item nav-link" [routerLinkActive]="['active']" >
       <a >Sponsorship
         <span class="badge badge-pill badge-default" title="GRZ">1,118</span>
         <span class="badge badge-pill badge-success" title="Self">300</span>
@@ -33,10 +32,7 @@
       </a>
     </li>
   </ul>
-
-  <div class="container tab-content col-sm-9">
-    <!--<router-outlet>    </router-outlet>-->
-    <router-outlet ></router-outlet>
-    
+  <div class="container tab-content col-sm-9" style="height:500px;width:400px;overflow:auto">
+    <router-outlet></router-outlet>
   </div>
 </div>

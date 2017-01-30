@@ -1,9 +1,8 @@
 footer {
-  position: absolute;
   background: lightgray;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  border-radius: 2;
+  font-size: small;
+
+}
+#login-details-container {
+  padding-left: 30px;
 }

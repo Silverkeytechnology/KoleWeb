@@ -1,22 +1,18 @@
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Http, Response } from '@angular/http';
-import { Router } from '@angular/router';
+import { Router,UrlTree, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { StudentService } from '../shared/student.service';
 import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import { Student } from '../student/student.model';
-import { Observable } from 'rxjs/Observable';
-
 
 @Component({
   selector: 'app-students-list',
   templateUrl: './students-list.component.html',
   styleUrls: ['./students-list.component.css']
 })
-export class StudentsListComponent implements OnInit {
+export class StudentsListComponent implements OnInit, AfterViewInit {
   students: Student[];
-  errorMessage: string;
+  errorMessage: any;
 
-  constructor(private router: Router, private studentservice: StudentService, private modalService: NgbModal) {  }
+constructor(private router: Router,private route: ActivatedRoute, private studentservice: StudentService) {  }
 
   ngOnInit() {
     this.studentservice.getStudents()
@@ -26,33 +22,32 @@ export class StudentsListComponent implements OnInit {
                         );
   }
 
-open() {
-  //console.log("Detail: ", this.studentDetailComponent);
-  //this.studentDetailComponent.open();
+  ngAfterViewInit() {
 
-/*    const modalRef = this.modalService.open(StudentDetailComponent);
-    modalRef.componentInstance.name = 'Chaiwa';
-    modalRef.result.then((result) => {
-    }, (reason) => {
-
-    });
-    */
-    console.log('Clic event fired..');
   }
 
-
-  getStudents() {
-  }
-
-/*
-The component's onSelect calls the router's navigate method with a link parameters array.
-You can use this same syntax in a RouterLink if you decide later to navigate in
- HTML template rather than in component code.
-*/
   onSelect(student: Student) {
-/*    this.router.navigate(['/students-center/students-list', student._id]);
-    console.log("student._id: ", student._id);
-    console.log("student._id type: ", typeof(student._id));
-    */
+    //students-center/(menucontent:students-list)
+    //this.router.navigate([{outlets: {[menucontent: ['/students-center/students-list/',student._id]]}}]);
+    //[{outlets: {menucontent: ['students-dashboard']}}]
+    //['/students-center/(menucontent:student-profile)', student._id]
+    //use relativeTo: route if you choose to use relative paths
+    //get the current url from the router
+    //(menucontent:student-profile;open=true)
+    //const url: string = this.router.url;
+    //const tree: UrlTree = this.router.parseUrl(url);
+  //  console.log('url: ', url);
+    //console.log('this.route.url: ', this.route.url);
+    //console.log('tree: ', tree);
+
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "id": student._id
+      }
+    };
+    //['../', student._id], {relativeTo: this.route
+    //this.router.navigate(['students-center/students-list/12']);
+    //this.router.navigate([{outlets: {profile: ['students-center','students-list','12']}}]);
+    this.router.navigate(['students-center','students-list',student._id]);
   }
 }

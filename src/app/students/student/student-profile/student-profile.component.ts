@@ -1,25 +1,30 @@
-import { Component, Input, OnInit, Compiler } from '@angular/core';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Student } from '../../student-model/student';
+import { Component, Input, OnInit,OnDestroy, Compiler } from '@angular/core';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import { ActivatedRoute, Router, UrlTree } from '@angular/router';
+import { Student } from '../student.model';
+import { Observable } from 'rxjs/observable';
+
 
 @Component({
   selector: 'app-student-profile',
   templateUrl: './student-profile.component.html',
-  styleUrls: ['./student-profile.component.css']
+  styleUrls: ['./student-profile.component.css'],
+  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
 })
-export class StudentProfileComponent implements OnInit {
-  @Input() student: Student;
+export class StudentProfileComponent implements OnInit, OnDestroy {
+  location: Location;
 
-  constructor(public activeModal: NgbActiveModal, private modalService: NgbModal) { }
+  constructor(location: Location, private route: ActivatedRoute, private router: Router) {
+    this.location = location;
+   }
 
   ngOnInit() {
+
   }
 
-  public open(_student: Student) {
-    //this.compiler.clearCacheFor(student-detail-modal-content); only when the template is caching
-    const modalRef = this.modalService.open(StudentDetailContent);
-    modalRef.componentInstance.student = _student;
+  ngOnDestroy() {
   }
-
-
+  onBack(){
+    this.location.back();
+  }
 }

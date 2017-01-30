@@ -14,27 +14,23 @@ import { Student } from '../student/student.model';
 @Injectable()
 export class StudentService {
 
-  //private studentsUrl = 'https://kole-api.herokuapp.com/api/students'; //URL to web API
-  private studentsUrl = 'http://localhost:3000/api/students'; //URL to web API
+  private studentsUrl = 'https://kole-api.herokuapp.com/api/students'; //URL to web API
+//private studentsUrl = 'http://localhost:3000/api/students'; //URL to web API
   constructor(private http: Http) { }
 
   getStudent(id: string): Observable<Student> {
     let studentURL = this.studentsUrl + '/'+ id;
-    console.log("id: ", id);
-    console.log("url: ", studentURL);
-
     return this.http.get(studentURL)
                 .map(res => res.json() || {})
                 .catch(this.handleError);
   }
 
   private extractData(res: Response){
-
     let body = res.json();
     return body || { };
   }
 
-  getStudents(): Observable<Student[]> {
+  getStudents(): Observable<any[]> {
     return this.http.get(this.studentsUrl)
                     .map(res => res.json() || {})
                     .catch(this.handleError);
