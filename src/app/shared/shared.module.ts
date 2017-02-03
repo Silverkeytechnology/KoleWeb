@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
   ],
   declarations: [
     PageNotFoundComponent,
-    ComposeMessageComponent
+    ComposeMessageComponent,
+    SpinnerComponent
   ],
   exports: [
     PageNotFoundComponent,
