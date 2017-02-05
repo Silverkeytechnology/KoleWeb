@@ -1,8 +1,8 @@
 import { Router,UrlTree, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { StudentService } from '../shared/student.service';
-import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, Input} from '@angular/core';
 import { Student } from '../student/student.model';
-import { SpinnerComponent } from '../../shared/spinner/spinner.component';
+//import { SpinnerComponent } from '../../shared/spinner/spinner.component';
 
 @Component({
   selector: 'app-students-list',
@@ -12,6 +12,7 @@ import { SpinnerComponent } from '../../shared/spinner/spinner.component';
 export class StudentsListComponent implements OnInit, AfterViewInit {
   students: Student[];
   errorMessage: any;
+  
 
 constructor(private router: Router,private route: ActivatedRoute, private studentservice: StudentService) {  }
 

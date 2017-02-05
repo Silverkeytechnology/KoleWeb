@@ -1,8 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { LoggerService } from '../logger/logger.service';
-import { SpinnerState } from './spinner.service';
-import { SpinnerService } from './spinner.service';
+import { SpinnerState,SpinnerService } from './spinner.service';
 
 @Component({
   selector: 'app-spinner',
@@ -11,7 +10,7 @@ import { SpinnerService } from './spinner.service';
 })
 export class SpinnerComponent implements OnInit,OnDestroy {
 
-  visible = false;
+  visible = true;
 
   private spinnerSateChanged: Subscription;
 

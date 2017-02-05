@@ -4,6 +4,7 @@ import { CommonModule, NgLocalization } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { StudentsRouterModule } from './students-router/students-router.module';
+import { SharedModule } from '../shared/shared.module';
 
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentsDashboardComponent } from './students-dashboard/students-dashboard.component';
@@ -28,10 +29,12 @@ import { StudentPersonalInfoComponent } from './student/student-personal-info/st
 import { StudentProfileComponent } from './student/student-profile/student-profile.component';
 import { StudentSponsorshipComponent } from './student/student-sponsorship/student-sponsorship.component';
 
+
 @NgModule({
   imports: [
     StudentsRouterModule,
     NgbModule,
+    SharedModule,
     FormsModule,
     CommonModule
   ],

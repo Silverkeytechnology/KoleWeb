@@ -22,7 +22,7 @@ import { appRouter } from './app.router';
     BrowserModule,
     FormsModule,
     HttpModule,
-    SharedModule.forRoot(),
+    SharedModule,
     StudentsModule,
     ClassesModule,
     CoursesModule,
