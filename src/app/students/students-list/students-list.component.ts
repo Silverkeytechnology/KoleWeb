@@ -2,7 +2,8 @@ import { Router,UrlTree, ActivatedRoute, NavigationExtras } from '@angular/route
 import { StudentService } from '../shared/student.service';
 import { Component, OnInit, AfterViewInit, ViewChild, Input} from '@angular/core';
 import { Student } from '../student/student.model';
-//import { SpinnerComponent } from '../../shared/spinner/spinner.component';
+import { SpinnerComponent } from '../../shared/spinner/spinner.component';
+import { SpinnerService } from '../../shared/spinner/spinner.service';
 
 @Component({
   selector: 'app-students-list',
@@ -14,12 +15,13 @@ export class StudentsListComponent implements OnInit, AfterViewInit {
   errorMessage: any;
   
 
-constructor(private router: Router,private route: ActivatedRoute, private studentservice: StudentService) {  }
+constructor(private router: Router,private route: ActivatedRoute, private studentservice: StudentService, private spinnerService: SpinnerService) {  }
 
   ngOnInit() {
+    this.spinnerService.show();
     this.studentservice.getStudents()
                         .subscribe(
-                          students => {this.students = students;},
+                          students => {this.students = students;this.spinnerService.hide();},
                           error => {this.errorMessage = <any>error;}
                         );
   }

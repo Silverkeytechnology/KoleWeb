@@ -10,7 +10,7 @@ import { SpinnerState,SpinnerService } from './spinner.service';
 })
 export class SpinnerComponent implements OnInit,OnDestroy {
 
-  visible = true;
+  visible = false;
 
   private spinnerSateChanged: Subscription;
 

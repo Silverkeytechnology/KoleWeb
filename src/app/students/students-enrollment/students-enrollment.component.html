@@ -1,49 +1,43 @@
-<div class="panel panel-primary ">
-  <div class="panel-heading">
-    <h3 class="panel-title">Students Enrollment</h3>
-  </div>
-  <div class="panel-body fuelux">
-    <div class="wizard" data-initialize="wizard" id="enrollWizard">
-      <div class="steps-container">
-        <ul class="steps">
-          <li data-step="1" data-name="admission" class="active">
-            <span class="badge">1</span>Confirm Admission
-            <span class="chevron"></span>
+<input type="text" >
+<button class="button-primary">New Student</button>
+<div class="card card-default ">
+  <div class="card-header">
+      <h3 class="card-title">Enrollment Process</h3>
+        <ul class="nav nav-pills nav-wizard nav-wizard-backnav" role="tablist">
+          <li data-step="1" data-name="admission" class="active nav-item" role="tab">
+            <a data-toggle="pill" href="#admission">
+               <span class="badge badge-default">1</span> Confirm Admission <i class="fa fa-times" aria-hidden="true"></i>
+               <span class="chevron"></span>
+            </a>
           </li>
-          <li data-step="2">
-            <span class="badge">2</span>Confirm Payments
-            <span class="chevron"></span>
+          <li data-step="2" class="nav-item" role="tab">
+            <a data-toggle="pill" href="#payments">
+                <span class="badge badge-default">2</span> Confirm Payments <i class="fa fa-times" aria-hidden="true"></i>
+                <span class="chevron"></span>
+            </a>
           </li>
-          <li data-step="3">
-            <span class="badge">3</span>Assign Class
-            <span class="chevron"></span>
+          <li data-step="3" class="nav-item" role="tab">
+            <a data-toggle="pill" href="#class">
+                <span class="badge badge-default">3</span> Assign Class <i class="fa fa-times" aria-hidden="true"></i>
+                <span class="chevron"></span>
+            </a>
           </li>
         </ul>
+    </div>
+  </div> <!--Header Ends-->
+  <div class="card-body ">
+    <div class="tab-content">
+      <div class="tab-pane active " id="admission" role="tabpanel" data-step="1">
+        <h4>Confirm Admission</h4>
       </div>
-  <div class="actions">
-    <button type="button" class="btn btn-default btn-prev">
-      <span class="glyphicon glyphicon-arrow-left"></span>Prev
-    </button>
-    <button type="button" class="btn btn-primary btn-next" data-last="Complete">Next
-      <span class="glyphicon glyphicon-arrow-right"></span>
-    </button>
-  </div>
-  <div class="step-content">
-    <div class="step-pane active sample-pane alert" data-step="1">
-      <h4>Confirm Admission</h4>
-    </div>
 
-    <div class="step-pane sample-pane bg-info alert" data-step="2">
-      <h4>Confirm Payments</h4>
-    </div>
+      <div class="tab-pane" id="payments" role="tabpanel" data-step="2">
+        <h4>Confirm Payments</h4>
+      </div>
 
-    <div class="step-pane active sample-pane alert" data-step="3">
-      <h4>Assign Class</h4>
+      <div class="tab-pane" id="class" role="tabpanel" data-step="3">
+        <h4>Assign Class</h4>
+      </div>
     </div>
-  </div>
-  </div>
-  </div>
-
 </div>
-
 <router-outlet></router-outlet>
